@@ -1,0 +1,10 @@
+# PlatformIO
+firmware/.pio/
+firmware/.vscode/
+
+# macOS
+.DS_Store
+
+# Editors
+*.swp
+*~
