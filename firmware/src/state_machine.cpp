@@ -17,12 +17,14 @@ static void enter_off() {
     _state = STATE_OFF;
     _timer_ticks = 0;
     outputs_all_off();
+    outputs_illumination(false);
 }
 
 static void enter_welcome() {
     _state = STATE_WELCOME;
     _timer_ticks = secs_to_ticks(cfg.welcome_duration);
     outputs_set(cfg.welcome_lights);
+    outputs_illumination(true);
 }
 
 static void enter_acc() {
@@ -32,27 +34,30 @@ static void enter_acc() {
         outputs_set(cfg.acc_lights);
     else
         outputs_all_off();
+    outputs_illumination(true);
 }
 
 static void enter_drl() {
     _state = STATE_DRL;
     _timer_ticks = 0;
-    /* DRL = винаги ксенон + габарити */
     outputs_gabari(true);
     outputs_xenon(true);
     outputs_fog(false);
+    outputs_illumination(true);
 }
 
 static void enter_goodbye() {
     _state = STATE_GOODBYE;
     _timer_ticks = secs_to_ticks(cfg.goodbye_duration);
     outputs_set(cfg.goodbye_lights);
+    outputs_illumination(true);
 }
 
 static void enter_manual() {
     _state = STATE_MANUAL;
     _timer_ticks = 0;
-    outputs_all_off();  /* factory BCM управлява всичко */
+    outputs_all_off();
+    outputs_illumination(false);  /* BCM управлява illumination нормално */
 }
 
 /* ── Tick ────────────────────────────────────────────────────────────── */
