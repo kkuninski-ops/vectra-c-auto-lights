@@ -13,3 +13,7 @@ firmware/.vscode/
 hardware/kicad/~*.lck
 hardware/kicad/.history/
 hardware/kicad/fp-info-cache
+hardware/kicad/_autosave-*
+hardware/kicad/_restore_backup_*/
+hardware/kicad/*-backups/
+hardware/kicad/*.kicad_prl
