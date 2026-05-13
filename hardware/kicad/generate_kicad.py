@@ -235,7 +235,7 @@ for i, (ref, y, net_in, led_k, out_net, gpio) in enumerate(opto_data):
     components.append(rx)
 
     # PC817 optocoupler
-    ok = Comp("Opto:PC817", ref, "PC817", 58, y,
+    ok = Comp("Isolator:PC817", ref, "PC817", 58, y,
               footprint="Package_DIP:DIP-4_W7.62mm")
     ok.pin_label(led_k,  -7.62, -2.54)  # Anode
     ok.pin_label("GND",  -7.62,  2.54)  # Cathode
@@ -360,8 +360,8 @@ q3.pin_label("GND",                0,  5)
 components.append(q3)
 
 # K1 — реле габарити (SPDT 12V)
-k1 = Comp("Relay:G5V-2", "K1", "Relay_12V", 270, 90,
-          footprint="Relay_THT:Relay_SPDT_Omron_G5V-2")
+k1 = Comp("Relay:G5V-1", "K1", "Relay_12V", 270, 90,
+          footprint="Relay_THT:Relay_SPDT_Omron_G5V-1")
 k1.pin_label("RELAY_PWR",        -8, -5)  # Coil +
 k1.pin_label("RELAY_K1_COIL_N",  -8,  5)  # Coil -
 k1.pin_label("RELAY_PWR",         8, -5)  # NO → 12V за габарити
@@ -415,8 +415,8 @@ q4.pin_label("RELAY_K2_COIL_N",    0, -5)
 q4.pin_label("GND",                0,  5)
 components.append(q4)
 
-k2 = Comp("Relay:G5V-2", "K2", "Relay_12V", 270, 130,
-          footprint="Relay_THT:Relay_SPDT_Omron_G5V-2")
+k2 = Comp("Relay:G5V-1", "K2", "Relay_12V", 270, 130,
+          footprint="Relay_THT:Relay_SPDT_Omron_G5V-1")
 k2.pin_label("RELAY_PWR",        -8, -5)
 k2.pin_label("RELAY_K2_COIL_N",  -8,  5)
 k2.pin_label("RELAY_PWR",         8, -5)
