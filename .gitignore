@@ -8,3 +8,8 @@ firmware/.vscode/
 # Editors
 *.swp
 *~
+
+# KiCad lock files and temp
+hardware/kicad/~*.lck
+hardware/kicad/.history/
+hardware/kicad/fp-info-cache
