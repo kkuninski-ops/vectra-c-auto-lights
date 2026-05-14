@@ -1,0 +1,41 @@
+{
+  "name": "gabari.q",
+  "atoAddress": "gabari.q",
+  "designator": "Q2",
+  "descriptor": "Q2 \u2014 gabari.q",
+  "typeName": "main.ato::VectraAutoLights.gabari|main.ato::RelayChannel.q|parts/Jiangsu_Changjing_Electronics_Technology_Co___Ltd_BC547/Jiangsu_Changjing_Electronics_Technology_Co___Ltd_BC547.ato::BC547",
+  "footprintUuid": "c9db2bc4-2323-4774-84ea-87424642524b",
+  "leads": [
+    {
+      "leadDesignator": "C",
+      "padNumbers": [
+        "1"
+      ],
+      "netName": "gabari-2",
+      "signalType": "signal",
+      "interfaces": [],
+      "isConnected": true
+    },
+    {
+      "leadDesignator": "B",
+      "padNumbers": [
+        "2"
+      ],
+      "netName": "gabari-2-1",
+      "signalType": "signal",
+      "interfaces": [],
+      "isConnected": true
+    },
+    {
+      "leadDesignator": "e",
+      "padNumbers": [
+        "3"
+      ],
+      "netName": "gnd",
+      "signalType": "signal",
+      "interfaces": [],
+      "isConnected": true
+    }
+  ],
+  "warnings": []
+}

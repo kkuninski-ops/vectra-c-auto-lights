@@ -1,0 +1,138 @@
+(footprint "easyeda2kicad:RES-TH_BD2.5-L6.5-P10.50-D0.6"
+	(version 20241229)
+	(generator "faebryk_convert")
+	(generator_version "v5")
+	(layer "F.Cu")
+	(tedit "5DC5F6A4")
+	(uuid "6c5fdfe6-cd51-4308-b468-b6a37eb8dd56")
+	(property "Reference" "REF**"
+		(at 0 -4)
+		(layer "F.SilkS")
+		(uuid "f820c772-e784-4d18-b34b-81cddd394e09")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "RES-TH_BD2.5-L6.5-P10.50-D0.6"
+		(at 0 4)
+		(layer "F.Fab")
+		(uuid "41b99710-0ce5-4eff-a9c4-5fb4f02f6150")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(attr through_hole)
+	(fp_circle
+		(center -5.55 1.25)
+		(end -5.52 1.25)
+		(stroke
+			(width 0.06)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(locked no)
+		(uuid "47a25135-3fd8-44e7-b234-ed32702a335d")
+	)
+	(fp_circle
+		(center -5.25 0)
+		(end -5.1 0)
+		(stroke
+			(width 0.3)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(locked no)
+		(uuid "c1f7c90e-dc4e-4d87-a6a1-49bb92eecd37")
+	)
+	(fp_circle
+		(center 5.25 0)
+		(end 5.4 0)
+		(stroke
+			(width 0.3)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(locked no)
+		(uuid "706a5be3-00b4-40ce-a60c-fd92d2bc1bb5")
+	)
+	(fp_line
+		(start 3.25 1.25)
+		(end 3.25 -1.25)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(layers "F.SilkS")
+		(locked no)
+		(uuid "ba05b6c1-f2e7-452e-80c8-d1dfb6ab5acc")
+	)
+	(fp_line
+		(start -3.25 -1.25)
+		(end 3.25 -1.25)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(layers "F.SilkS")
+		(locked no)
+		(uuid "8d06b4bd-48af-461d-bde1-46e171d07a5c")
+	)
+	(fp_line
+		(start 3.25 1.25)
+		(end -3.25 1.25)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(layers "F.SilkS")
+		(locked no)
+		(uuid "923e2401-efb1-4305-9000-bfec18899301")
+	)
+	(fp_line
+		(start -3.25 1.25)
+		(end -3.25 -1.25)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(layers "F.SilkS")
+		(locked no)
+		(uuid "6e52add6-d059-4da0-ba4f-77272d0c12a3")
+	)
+	(pad "1" thru_hole circle
+		(at -5.25 0 0)
+		(size 1.88 1.88)
+		(drill 0.999998)
+		(layers "*.Cu" "*.Mask")
+		(uuid "cec0c418-a726-4174-b279-4dea99579d8b")
+	)
+	(pad "2" thru_hole circle
+		(at 5.25 0 0)
+		(size 1.88 1.88)
+		(drill 0.999998)
+		(layers "*.Cu" "*.Mask")
+		(uuid "55607afa-fea0-4e35-b346-836d0e6d2658")
+	)
+	(model "${KIPRJMOD}/../../../build/cache/parts/easyeda/C57436/RES-TH_D2.3-L6.5-P10.50.step"
+		(offset
+			(xyz 0.01 -0 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 0 0 0)
+		)
+	)
+	(embedded_fonts no)
+)

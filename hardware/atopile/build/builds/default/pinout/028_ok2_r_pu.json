@@ -1,0 +1,33 @@
+{
+  "name": "ok2.r_pu",
+  "atoAddress": "ok2.r_pu",
+  "designator": "R7",
+  "descriptor": "R7 \u2014 ok2.r_pu",
+  "typeName": "main.ato::VectraAutoLights.ok2|main.ato::OptocouplerChannel.r_pu|parts/UNI_ROYAL_MFR0W4F1002A50/UNI_ROYAL_MFR0W4F1002A50.ato::R_10k",
+  "footprintUuid": "bd95f243-cc08-428c-b448-e12f4642524b",
+  "leads": [
+    {
+      "leadDesignator": "p1",
+      "padNumbers": [
+        "1"
+      ],
+      "netName": "v33",
+      "signalType": "signal",
+      "interfaces": [],
+      "isConnected": false
+    },
+    {
+      "leadDesignator": "p2",
+      "padNumbers": [
+        "2"
+      ],
+      "netName": "sig_out-1",
+      "signalType": "signal",
+      "interfaces": [],
+      "isConnected": true
+    }
+  ],
+  "warnings": [
+    "1 unconnected lead(s)"
+  ]
+}

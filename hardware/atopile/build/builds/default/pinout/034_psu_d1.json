@@ -1,0 +1,33 @@
+{
+  "name": "psu.d1",
+  "atoAddress": "psu.d1",
+  "designator": "D9",
+  "descriptor": "D9 \u2014 psu.d1",
+  "typeName": "main.ato::VectraAutoLights.psu|main.ato::PowerSupply.d1|parts/ST_1N4007/ST_1N4007.ato::Diode_1N4007",
+  "footprintUuid": "e515f382-b5d9-41cd-b1cf-d3bf4642524b",
+  "leads": [
+    {
+      "leadDesignator": "K",
+      "padNumbers": [
+        "1"
+      ],
+      "netName": "1",
+      "signalType": "signal",
+      "interfaces": [],
+      "isConnected": true
+    },
+    {
+      "leadDesignator": "a",
+      "padNumbers": [
+        "2"
+      ],
+      "netName": "vin_raw",
+      "signalType": "signal",
+      "interfaces": [],
+      "isConnected": false
+    }
+  ],
+  "warnings": [
+    "1 unconnected lead(s)"
+  ]
+}

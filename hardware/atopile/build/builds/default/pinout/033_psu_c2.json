@@ -1,0 +1,31 @@
+{
+  "name": "psu.c2",
+  "atoAddress": "psu.c2",
+  "designator": "C2",
+  "descriptor": "C2 \u2014 psu.c2",
+  "typeName": "main.ato::VectraAutoLights.psu|main.ato::PowerSupply.c2|parts/KEMET_C315C104M5U5TA/KEMET_C315C104M5U5TA.ato::Cap_100nF",
+  "footprintUuid": "3dc16f1f-2bc2-42b3-8ab1-38924642524b",
+  "leads": [
+    {
+      "leadDesignator": "p",
+      "padNumbers": [
+        "1"
+      ],
+      "netName": "v33",
+      "signalType": "signal",
+      "interfaces": [],
+      "isConnected": true
+    },
+    {
+      "leadDesignator": "n",
+      "padNumbers": [
+        "2"
+      ],
+      "netName": "gnd",
+      "signalType": "signal",
+      "interfaces": [],
+      "isConnected": true
+    }
+  ],
+  "warnings": []
+}

@@ -1,0 +1,33 @@
+{
+  "name": "fog.r_base",
+  "atoAddress": "fog.r_base",
+  "designator": "R1",
+  "descriptor": "R1 \u2014 fog.r_base",
+  "typeName": "main.ato::VectraAutoLights.fog|main.ato::RelayChannel.r_base|parts/UNI_ROYAL_MFR0W4F1000A50/UNI_ROYAL_MFR0W4F1000A50.ato::R_1k",
+  "footprintUuid": "78dcffa2-acf8-4984-9112-d6194642524b",
+  "leads": [
+    {
+      "leadDesignator": "p1",
+      "padNumbers": [
+        "1"
+      ],
+      "netName": "ctrl",
+      "signalType": "signal",
+      "interfaces": [],
+      "isConnected": false
+    },
+    {
+      "leadDesignator": "p2",
+      "padNumbers": [
+        "2"
+      ],
+      "netName": "fog-2",
+      "signalType": "signal",
+      "interfaces": [],
+      "isConnected": true
+    }
+  ],
+  "warnings": [
+    "1 unconnected lead(s)"
+  ]
+}

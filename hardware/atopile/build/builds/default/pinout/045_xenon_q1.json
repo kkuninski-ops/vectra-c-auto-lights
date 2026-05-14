@@ -1,0 +1,41 @@
+{
+  "name": "xenon.q1",
+  "atoAddress": "xenon.q1",
+  "designator": "Q4",
+  "descriptor": "Q4 \u2014 xenon.q1",
+  "typeName": "main.ato::VectraAutoLights.xenon|main.ato::XenonDriver.q1|parts/Vishay_IRF4905PBF/Vishay_IRF4905PBF.ato::IRF4905",
+  "footprintUuid": "9c86fb8f-3739-48ba-84d7-7b9f4642524b",
+  "leads": [
+    {
+      "leadDesignator": "g",
+      "padNumbers": [
+        "1"
+      ],
+      "netName": "D",
+      "signalType": "signal",
+      "interfaces": [],
+      "isConnected": true
+    },
+    {
+      "leadDesignator": "d",
+      "padNumbers": [
+        "2"
+      ],
+      "netName": "out_xenon",
+      "signalType": "signal",
+      "interfaces": [],
+      "isConnected": true
+    },
+    {
+      "leadDesignator": "s",
+      "padNumbers": [
+        "3"
+      ],
+      "netName": "v12",
+      "signalType": "signal",
+      "interfaces": [],
+      "isConnected": true
+    }
+  ],
+  "warnings": []
+}

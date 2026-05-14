@@ -1,0 +1,19 @@
+import has_datasheet
+import has_designator_prefix
+import has_part_picked
+import is_atomic_part
+
+component Relay_SANYOU_SRD:
+    """Реле SPDT 12V 10A — SRD-12VDC-SL-C."""
+
+    trait is_atomic_part<manufacturer="Ningbo Songle Relay", partnumber="SRD-12VDC-SL-C", footprint="RELAY-TH_SRD-XXVDC-XL-C.kicad_mod", symbol="SRD-12VDC-SL-C.kicad_sym", model="RELAY-TH_L19.2-W15.6-H15.8.step">
+    trait has_part_picked::by_supplier<supplier_id="lcsc", supplier_partno="C30431", manufacturer="Ningbo Songle Relay", partno="SRD-12VDC-SL-C">
+    trait has_designator_prefix<prefix="K">
+    trait has_datasheet<datasheet="https://www.lcsc.com/datasheet/lcsc_datasheet_2304140030_Ningbo-Songle-Relay-SRD-12VDC-SL-C_C30431.pdf">
+
+    # pins
+    signal coil1 ~ pin 1
+    signal coil2 ~ pin 2
+    signal com   ~ pin 3
+    signal nc    ~ pin 4
+    signal no    ~ pin 5

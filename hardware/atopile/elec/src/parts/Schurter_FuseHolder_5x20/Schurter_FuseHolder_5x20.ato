@@ -1,0 +1,13 @@
+import has_designator_prefix
+import has_part_picked
+import is_atomic_part
+
+component FuseHolder_5x20:
+    """Държател на предпазител 5×20mm хоризонтален."""
+
+    trait is_atomic_part<manufacturer="Schurter", partnumber="0031.8201", footprint="Fuseholder_Cylinder-5x20mm_Schurter_0031_8201_Horizontal_Open.kicad_mod", symbol="Schurter_FuseHolder_5x20.kicad_sym">
+    trait has_part_picked::by_supplier<supplier_id="lcsc", supplier_partno="C2837835", manufacturer="Schurter", partno="0031.8201">
+    trait has_designator_prefix<prefix="F">
+
+    signal p1 ~ pin 1
+    signal p2 ~ pin 2

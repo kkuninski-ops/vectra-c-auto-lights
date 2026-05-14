@@ -1,0 +1,33 @@
+{
+  "name": "vbat_div.r1",
+  "atoAddress": "vbat_div.r1",
+  "designator": "R10",
+  "descriptor": "R10 \u2014 vbat_div.r1",
+  "typeName": "main.ato::VectraAutoLights.vbat_div|main.ato::VbatDivider.r1|parts/UNI_ROYAL_MFR0W4F4702A50/UNI_ROYAL_MFR0W4F4702A50.ato::R_47k",
+  "footprintUuid": "9ea5bbf7-182c-495e-a9bd-586e4642524b",
+  "leads": [
+    {
+      "leadDesignator": "p1",
+      "padNumbers": [
+        "1"
+      ],
+      "netName": "v12",
+      "signalType": "signal",
+      "interfaces": [],
+      "isConnected": false
+    },
+    {
+      "leadDesignator": "p2",
+      "padNumbers": [
+        "2"
+      ],
+      "netName": "vout",
+      "signalType": "signal",
+      "interfaces": [],
+      "isConnected": true
+    }
+  ],
+  "warnings": [
+    "1 unconnected lead(s)"
+  ]
+}

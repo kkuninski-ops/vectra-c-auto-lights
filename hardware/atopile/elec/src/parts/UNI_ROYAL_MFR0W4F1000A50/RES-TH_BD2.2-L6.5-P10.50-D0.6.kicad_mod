@@ -1,0 +1,162 @@
+(footprint "UNI_ROYAL_MFR0W4F1000A50:RES-TH_BD2.2-L6.5-P10.50-D0.6"
+	(version 20241229)
+	(generator "faebryk_convert")
+	(generator_version "v5")
+	(layer "F.Cu")
+	(tedit "5DC5F6A4")
+	(uuid "b79c215a-80bc-4f32-8632-15e42141c312")
+	(property "Reference" "REF**"
+		(at 0 -4)
+		(layer "F.SilkS")
+		(uuid "fe2fa74d-357e-4db3-9b84-b8cbacfce9db")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "RES-TH_BD2.2-L6.5-P10.50-D0.6"
+		(at 0 4)
+		(layer "F.Fab")
+		(uuid "95c98d07-b57d-4876-969b-41dc018dfbfa")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(attr through_hole)
+	(fp_circle
+		(center -5.52 1.1)
+		(end -5.49 1.1)
+		(stroke
+			(width 0.06)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(locked no)
+		(uuid "7faffc45-a1c3-42ca-8231-3b41b007b8ba")
+	)
+	(fp_circle
+		(center 5.25 0)
+		(end 5.39 0)
+		(stroke
+			(width 0.27)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(locked no)
+		(uuid "0e2cae53-58db-4003-a0ab-97f961a87576")
+	)
+	(fp_circle
+		(center -5.25 0)
+		(end -5.11 0)
+		(stroke
+			(width 0.27)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(locked no)
+		(uuid "15852160-7edb-4d93-a52f-7bc70c8a5bab")
+	)
+	(fp_line
+		(start -3.3 0)
+		(end -4.06 0)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(layers "F.SilkS")
+		(locked no)
+		(uuid "0edcc7b1-da44-4193-8ec0-e0f42223a4dc")
+	)
+	(fp_line
+		(start 3.3 0)
+		(end 4.06 0)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(layers "F.SilkS")
+		(locked no)
+		(uuid "65c9990b-233a-4ac0-9238-3484632a2bee")
+	)
+	(fp_line
+		(start -3.18 -1.14)
+		(end 3.3 -1.14)
+		(stroke
+			(width 3)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(layers "F.Fab")
+		(locked no)
+		(uuid "3e94800e-2ce7-486e-b821-2dfe7afcf9ba")
+	)
+	(fp_line
+		(start 3.3 -1.14)
+		(end 3.3 1.14)
+		(stroke
+			(width 3)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(layers "F.Fab")
+		(locked no)
+		(uuid "f30e4f62-6ba7-438c-b286-493312670702")
+	)
+	(fp_line
+		(start 3.3 1.14)
+		(end -3.18 1.14)
+		(stroke
+			(width 3)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(layers "F.Fab")
+		(locked no)
+		(uuid "18f9516d-1dbc-40e5-b819-80d26f36db2e")
+	)
+	(fp_line
+		(start -3.18 -1.14)
+		(end -3.18 -1.14)
+		(stroke
+			(width 3)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(layers "F.Fab")
+		(locked no)
+		(uuid "dd55e659-6cb8-46f5-ac2a-4e70c071885b")
+	)
+	(pad "1" thru_hole circle
+		(at -5.25 0 0)
+		(size 1.6 1.6)
+		(drill 0.9144)
+		(layers "*.Cu" "*.Mask")
+		(uuid "bc383546-4466-43ec-b705-b38c8153f552")
+	)
+	(pad "2" thru_hole circle
+		(at 5.25 0 0)
+		(size 1.6 1.6)
+		(drill 0.9144)
+		(layers "*.Cu" "*.Mask")
+		(uuid "96306861-e4a8-4a36-8abd-cc9c86795ffb")
+	)
+	(model "${KIPRJMOD}/../../src/parts/UNI_ROYAL_MFR0W4F1000A50/RES-TH_BD2.2-L6.5-P10.50-D0.6.step"
+		(offset
+			(xyz 0 -0 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 0 0 0)
+		)
+	)
+	(embedded_fonts no)
+)

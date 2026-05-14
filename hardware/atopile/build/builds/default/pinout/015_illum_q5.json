@@ -1,0 +1,41 @@
+{
+  "name": "illum.q5",
+  "atoAddress": "illum.q5",
+  "designator": "Q3",
+  "descriptor": "Q3 \u2014 illum.q5",
+  "typeName": "main.ato::VectraAutoLights.illum|main.ato::IllumDriver.q5|parts/Jiangsu_Changjing_Electronics_Technology_Co___Ltd_BC547/Jiangsu_Changjing_Electronics_Technology_Co___Ltd_BC547.ato::BC547",
+  "footprintUuid": "bf7066fa-1a50-44a6-aec1-47ee4642524b",
+  "leads": [
+    {
+      "leadDesignator": "C",
+      "padNumbers": [
+        "1"
+      ],
+      "netName": "out_illum",
+      "signalType": "signal",
+      "interfaces": [],
+      "isConnected": true
+    },
+    {
+      "leadDesignator": "b",
+      "padNumbers": [
+        "2"
+      ],
+      "netName": "illum-2",
+      "signalType": "signal",
+      "interfaces": [],
+      "isConnected": true
+    },
+    {
+      "leadDesignator": "e",
+      "padNumbers": [
+        "3"
+      ],
+      "netName": "gnd",
+      "signalType": "signal",
+      "interfaces": [],
+      "isConnected": true
+    }
+  ],
+  "warnings": []
+}

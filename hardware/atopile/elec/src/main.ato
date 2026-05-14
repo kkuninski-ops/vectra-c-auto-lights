@@ -1,0 +1,389 @@
+"""
+Vectra C Auto Lights v1.0
+=========================
+Автоматичен контролер на осветлението за Opel Vectra C 2008.
+ESP32 + оптрони + MOSFET + релета — THT, 120×80mm, 2 слоя.
+
+Сигнали от колата:
+  KL30   — постоянно +12V
+  GND    — маса
+  KL18   — +12V при запалено
+  AUTO   — +12V при AUTO позиция на копчето
+  UNLOCK — импулс при отключване
+  XENON  — изход към ксенон баласт
+  GABARI — изход към реле на габарити
+  FOG    — изход към реле на мъгловки
+  ILLUM  — изход към подсветка
+"""
+
+from "parts/UNI_ROYAL_MFR0W4F4702A50/UNI_ROYAL_MFR0W4F4702A50.ato" import R_47k
+from "parts/UNI_ROYAL_MFR0W4F1002A50/UNI_ROYAL_MFR0W4F1002A50.ato" import R_10k
+from "parts/UNI_ROYAL_MFR0W4F4701A50/UNI_ROYAL_MFR0W4F4701A50.ato" import R_4k7
+from "parts/UNI_ROYAL_MFR0W4F1000A50/UNI_ROYAL_MFR0W4F1000A50.ato" import R_1k
+from "parts/Nichicon_UBT1E101MPD1TD/Nichicon_UBT1E101MPD1TD.ato" import Cap_100uF
+from "parts/KEMET_C315C104M5U5TA/KEMET_C315C104M5U5TA.ato" import Cap_100nF
+from "parts/ST_1N4007/ST_1N4007.ato" import Diode_1N4007
+from "parts/MDD_Microdiode_Electronics_1N5408/MDD_Microdiode_Electronics_1N5408.ato" import Diode_1N5408
+from "parts/RUILON_P6KE15A/RUILON_P6KE15A.ato" import Diode_P6KE15A
+from "parts/Schurter_FuseHolder_5x20/Schurter_FuseHolder_5x20.ato" import FuseHolder_5x20
+from "parts/Jiangsu_Changjing_Electronics_Technology_Co___Ltd_BC547/Jiangsu_Changjing_Electronics_Technology_Co___Ltd_BC547.ato" import BC547
+from "parts/Vishay_IRF4905PBF/Vishay_IRF4905PBF.ato" import IRF4905
+from "parts/Changjiang_Electronics_Tech_2N7000/Changjiang_Electronics_Tech_2N7000.ato" import N2N7000
+from "parts/UMW_PC817C/UMW_PC817C.ato" import PC817
+from "parts/HGSEMI_LM7805CT/HGSEMI_LM7805CT.ato" import LM7805
+from "parts/Ningbo_Songle_Relay_SRD_12VDC_SL_C/Ningbo_Songle_Relay_SRD_12VDC_SL_C.ato" import Relay_SANYOU_SRD
+from "parts/BOOMELE_PinHeader_1x2_P254/BOOMELE_PinHeader_1x2_P254.ato" import Conn_1x02
+from "parts/BOOMELE_2_54_1_3P/BOOMELE_2_54_1_3P.ato" import Conn_1x03
+from "parts/BOOMELE_PinHeader_1x4_P254/BOOMELE_PinHeader_1x4_P254.ato" import Conn_1x04
+from "parts/Espressif_Systems_ESP32_WROOM_32E_N4/Espressif_Systems_ESP32_WROOM_32E_N4.ato" import ESP32_DevKit
+
+
+# ─── Подмодул: Захранване ────────────────────────────────────────────────────
+
+module PowerSupply:
+    """
+    12V → 5V захранване за ESP32.
+    Входна защита: диода D1 (обратен ток) + TVS D12 (пренапрежение).
+    Предпазители: F1 (MCU 1A) + F2 (ксенон 15A) + F3 (релета 5A).
+    """
+    signal vin_raw    # от KL30 (директно от колата)
+    signal vin_prot   # след защита
+    signal v12        # след предпазители
+    signal v5         # изход 5V за ESP32
+    signal gnd
+
+    # Диодна защита срещу обратно свързване
+    d1 = new Diode_1N4007
+    d1.a ~ vin_raw
+    d1.k ~ vin_prot
+
+    # TVS диода — защита от spike-ове на бордовата мрежа
+    d12 = new Diode_P6KE15A
+    d12.a ~ gnd
+    d12.k ~ vin_prot
+
+    # Предпазители
+    f1 = new FuseHolder_5x20   # 1A — MCU захранване
+    f2 = new FuseHolder_5x20   # 15A — ксенон
+    f3 = new FuseHolder_5x20   # 5A — релета и мъгловки
+    f1.p1 ~ vin_prot
+    f2.p1 ~ vin_prot
+    f3.p1 ~ vin_prot
+    f1.p2 ~ v12
+    f2.p2 ~ v12
+    f3.p2 ~ v12
+
+    # LM7805 — 12V → 5V линеен стабилизатор
+    u2 = new LM7805
+    u2.vi  ~ v12
+    u2.gnd ~ gnd
+    u2.vo  ~ v5
+
+    # Изглаждащи кондензатори
+    c1 = new Cap_100uF
+    c2 = new Cap_100nF
+    c1.p ~ v12
+    c1.n ~ gnd
+    c2.p ~ v5
+    c2.n ~ gnd
+
+
+# ─── Подмодул: Делител на VBAT ───────────────────────────────────────────────
+
+module VbatDivider:
+    """
+    Резисторен делител за измерване на напрежението на акумулатора.
+    12V → ~2.1V (за ESP32 ADC, 3.3V макс).
+    R1=47k, R2=10k → коефициент 10/(47+10) = 0.175 → 12V × 0.175 = 2.1V
+    """
+    signal vin   # от 12V
+    signal vout  # към ESP32 ADC (GPIO4)
+    signal gnd
+
+    r1 = new R_47k
+    r2 = new R_10k
+
+    r1.p1 ~ vin
+    r1.p2 ~ vout
+    r2.p1 ~ vout
+    r2.p2 ~ gnd
+
+
+# ─── Подмодул: Оптрон канал ──────────────────────────────────────────────────
+
+module OptocouplerChannel:
+    """
+    Един оптрон канал за галванична изолация на входен сигнал от колата.
+    Входен резистор R_in ограничава LED тока до ~2mA при 12V.
+    Pull-up резистор R_pu вдига изхода към 3.3V при отворен колектор.
+    """
+    signal sig_in   # вход от колата (0..12V)
+    signal sig_out  # изход към ESP32 GPIO (0..3.3V, инвертиран)
+    signal v12      # 12V за входната страна
+    signal v33      # 3.3V за изходния pull-up
+    signal gnd
+
+    ok = new PC817
+    r_in = new R_4k7    # ограничителен резистор на LED
+    r_pu = new R_10k    # pull-up на изхода
+
+    # Входна верига: sig_in → R_in → LED анод → LED катод → GND
+    r_in.p1 ~ sig_in
+    r_in.p2 ~ ok.a
+    ok.k    ~ gnd
+
+    # Изходна верига: v33 → R_pu → колектор → емитер → GND
+    r_pu.p1 ~ v33
+    r_pu.p2 ~ ok.col
+    ok.col  ~ sig_out
+    ok.em   ~ gnd
+
+
+# ─── Подмодул: Ксенон MOSFET управление ─────────────────────────────────────
+
+module XenonDriver:
+    """
+    P-Channel MOSFET управление за ксенон баласт.
+    Q2 (2N7000 N-MOS) дърпа gate на Q1 (IRF4905 P-MOS) към GND → Q1 се отваря.
+    D2, D3 (1N5408) защитават drain/source на Q1 срещу индуктивни spike-ове.
+    """
+    signal ctrl     # управление от ESP32 (HIGH = ксенон вкл.)
+    signal v12      # 12V шина
+    signal out      # изход към ксенон баласт (+12V при вкл.)
+    signal gnd
+
+    r10 = new R_1k      # базов резистор на Q2
+    q2  = new N2N7000   # N-MOS ключ
+    r9  = new R_10k     # pull-down на gate на Q1
+    q1  = new IRF4905   # P-MOS главен ключ
+    d2  = new Diode_1N5408
+    d3  = new Diode_1N5408
+
+    # Управляваща верига
+    r10.p1 ~ ctrl
+    r10.p2 ~ q2.g
+    q2.s   ~ gnd
+    q2.d   ~ q1.g
+
+    # Pull-down на gate на Q1
+    r9.p1  ~ v12
+    r9.p2  ~ q1.g
+
+    # Q1 P-MOS — главен ключ
+    q1.s   ~ v12
+    q1.d   ~ out
+
+    # Защитни диоди
+    d2.a   ~ gnd
+    d2.k   ~ out
+    d3.a   ~ out
+    d3.k   ~ v12
+
+
+# ─── Подмодул: Реле канал ────────────────────────────────────────────────────
+
+module RelayChannel:
+    """
+    NPN транзистор + SPDT реле за управление на товари до 10A/12V.
+    Fly-back диода D_coil защитава транзистора.
+    D_no и D_nc защитават изходите срещу spike-ове.
+    """
+    signal ctrl   # управление от ESP32 (HIGH = реле вкл.)
+    signal v12    # 12V за бобината и контактите
+    signal com    # общ контакт на реле
+    signal no     # нормално отворен (затваря при вкл.)
+    signal gnd
+
+    r_base  = new R_1k
+    q       = new BC547
+    relay   = new Relay_SANYOU_SRD
+    d_coil  = new Diode_1N4007   # fly-back диода
+    d_no    = new Diode_1N4007   # защита NO контакт
+    d_com   = new Diode_1N4007   # защита COM контакт
+
+    # Управляваща верига: ctrl → R → база → колектор → бобина → 12V
+    r_base.p1 ~ ctrl
+    r_base.p2 ~ q.b
+    q.e       ~ gnd
+    q.c       ~ relay.coil2
+
+    # Бобина на реле
+    relay.coil1 ~ v12
+
+    # Fly-back диода — паралелно на бобината
+    d_coil.a ~ relay.coil2
+    d_coil.k ~ relay.coil1
+
+    # Изходни контакти
+    relay.com ~ com
+    relay.no  ~ no
+
+    # Защитни диоди на контактите
+    d_no.a  ~ gnd
+    d_no.k  ~ no
+    d_com.a ~ gnd
+    d_com.k ~ com
+
+
+# ─── Подмодул: Осветление (подсветка на таблото) ────────────────────────────
+
+module IllumDriver:
+    """
+    NPN транзистор за управление на подсветката (ILL сигнал).
+    D10, D11 — изходни защитни диоди.
+    """
+    signal ctrl   # от ESP32
+    signal v12
+    signal out    # ILL изход към радиото
+    signal gnd
+
+    r13 = new R_1k
+    q5  = new BC547
+    d10 = new Diode_1N4007
+    d11 = new Diode_1N4007
+
+    r13.p1 ~ ctrl
+    r13.p2 ~ q5.b
+    q5.e   ~ gnd
+    q5.c   ~ out
+
+    d10.a  ~ gnd
+    d10.k  ~ out
+    d11.a  ~ gnd
+    d11.k  ~ v12
+
+
+# ═══════════════════════════════════════════════════════════════════════════════
+# ГЛАВЕН МОДУЛ
+# ═══════════════════════════════════════════════════════════════════════════════
+
+module VectraAutoLights:
+    """
+    Vectra C Auto Lights v1.0 — пълна платка.
+    120×80mm, 2-слойна, THT компоненти.
+    """
+
+    # ── Захранващи шини ──────────────────────────────────────────────────────
+    signal kl30    # +12V постоянно от колата
+    signal v12     # +12V след предпазители
+    signal v5      # +5V за ESP32 VIN
+    signal v33     # +3.3V от ESP32
+    signal gnd     # маса
+
+    # ── Входни сигнали от колата ──────────────────────────────────────────────
+    signal sig_kl18   # +12V при запалено
+    signal sig_auto   # +12V при AUTO позиция
+    signal sig_unlock # импулс при отключване
+
+    # ── Изходи ───────────────────────────────────────────────────────────────
+    signal out_xenon  # към ксенон баласт
+    signal out_gabari # към реле на габарити (NO контакт)
+    signal out_fog    # към реле на мъгловки (NO контакт)
+    signal out_illum  # подсветка ILL
+
+    # ─── Конектори ───────────────────────────────────────────────────────────
+    j1 = new Conn_1x02   # KL30 + GND
+    j2 = new Conn_1x04   # CAR_INPUTS: KL18, AUTO, UNLOCK, GND
+    j3 = new Conn_1x03   # XENON: XENON_OUT, GND, 12V
+    j4 = new Conn_1x03   # GABARI: COM, NO, GND
+    j5 = new Conn_1x03   # FOG: COM, NO, GND
+    j6 = new Conn_1x03   # ILLUM: OUT, GND, 12V
+
+    # J1 — Захранване
+    j1.p1 ~ kl30
+    j1.p2 ~ gnd
+
+    # J2 — Входи от колата
+    j2.p1 ~ sig_kl18
+    j2.p2 ~ sig_auto
+    j2.p3 ~ sig_unlock
+    j2.p4 ~ gnd
+
+    # J3 — Ксенон
+    j3.p1 ~ out_xenon
+    j3.p2 ~ gnd
+    j3.p3 ~ v12
+
+    # J4 — Габарити
+    j4.p1 ~ gabari.com
+    j4.p2 ~ out_gabari
+    j4.p3 ~ gnd
+
+    # J5 — Мъгла
+    j5.p1 ~ fog.com
+    j5.p2 ~ out_fog
+    j5.p3 ~ gnd
+
+    # J6 — Подсветка
+    j6.p1 ~ out_illum
+    j6.p2 ~ gnd
+    j6.p3 ~ v12
+
+    # ─── Захранване ──────────────────────────────────────────────────────────
+    psu = new PowerSupply
+    psu.vin_raw ~ kl30
+    psu.v12     ~ v12
+    psu.v5      ~ v5
+    psu.gnd     ~ gnd
+
+    # ─── ESP32 ───────────────────────────────────────────────────────────────
+    u1 = new ESP32_DevKit
+    u1.vin  ~ v5
+    u1.gnd  ~ gnd
+    u1.vcc  ~ v33   # 3.3V изход за pull-up резистори
+
+    # ─── Делител на VBAT ─────────────────────────────────────────────────────
+    vbat_div = new VbatDivider
+    vbat_div.vin  ~ v12
+    vbat_div.vout ~ u1.gpio4
+    vbat_div.gnd  ~ gnd
+
+    # ─── Оптрони (входни сигнали) ────────────────────────────────────────────
+    ok1 = new OptocouplerChannel   # KL18 / запалено
+    ok1.sig_in  ~ sig_kl18
+    ok1.sig_out ~ u1.gpio16
+    ok1.v12     ~ v12
+    ok1.v33     ~ v33
+    ok1.gnd     ~ gnd
+
+    ok2 = new OptocouplerChannel   # AUTO сигнал
+    ok2.sig_in  ~ sig_auto
+    ok2.sig_out ~ u1.gpio17
+    ok2.v12     ~ v12
+    ok2.v33     ~ v33
+    ok2.gnd     ~ gnd
+
+    ok3 = new OptocouplerChannel   # UNLOCK импулс
+    ok3.sig_in  ~ sig_unlock
+    ok3.sig_out ~ u1.gpio5
+    ok3.v12     ~ v12
+    ok3.v33     ~ v33
+    ok3.gnd     ~ gnd
+
+    # ─── Ксенон MOSFET ───────────────────────────────────────────────────────
+    xenon = new XenonDriver
+    xenon.ctrl  ~ u1.gpio18
+    xenon.v12   ~ v12
+    xenon.out   ~ out_xenon
+    xenon.gnd   ~ gnd
+
+    # ─── Реле K1 — Габарити ──────────────────────────────────────────────────
+    gabari = new RelayChannel
+    gabari.ctrl  ~ u1.gpio19
+    gabari.v12   ~ v12
+    gabari.no    ~ out_gabari
+    gabari.gnd   ~ gnd
+
+    # ─── Реле K2 — Мъгла ─────────────────────────────────────────────────────
+    fog = new RelayChannel
+    fog.ctrl  ~ u1.gpio21
+    fog.v12   ~ v12
+    fog.no    ~ out_fog
+    fog.gnd   ~ gnd
+
+    # ─── Подсветка ───────────────────────────────────────────────────────────
+    illum = new IllumDriver
+    illum.ctrl  ~ u1.gpio22
+    illum.v12   ~ v12
+    illum.out   ~ out_illum
+    illum.gnd   ~ gnd

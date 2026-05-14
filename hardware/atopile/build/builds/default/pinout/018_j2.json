@@ -1,0 +1,51 @@
+{
+  "name": "j2",
+  "atoAddress": "j2",
+  "designator": "J2",
+  "descriptor": "J2 \u2014 j2",
+  "typeName": "main.ato::VectraAutoLights.j2|parts/BOOMELE_PinHeader_1x4_P254/BOOMELE_PinHeader_1x4_P254.ato::Conn_1x04",
+  "footprintUuid": "c8c5459a-423d-4552-b35f-9c144642524b",
+  "leads": [
+    {
+      "leadDesignator": "p1",
+      "padNumbers": [
+        "1"
+      ],
+      "netName": "sig_in",
+      "signalType": "signal",
+      "interfaces": [],
+      "isConnected": true
+    },
+    {
+      "leadDesignator": "p2",
+      "padNumbers": [
+        "2"
+      ],
+      "netName": "sig_auto",
+      "signalType": "signal",
+      "interfaces": [],
+      "isConnected": true
+    },
+    {
+      "leadDesignator": "p3",
+      "padNumbers": [
+        "3"
+      ],
+      "netName": "sig_unlock",
+      "signalType": "signal",
+      "interfaces": [],
+      "isConnected": true
+    },
+    {
+      "leadDesignator": "p4",
+      "padNumbers": [
+        "4"
+      ],
+      "netName": "gnd",
+      "signalType": "signal",
+      "interfaces": [],
+      "isConnected": true
+    }
+  ],
+  "warnings": []
+}

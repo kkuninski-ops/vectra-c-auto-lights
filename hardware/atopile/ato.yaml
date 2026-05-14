@@ -1,0 +1,18 @@
+requires-atopile: ">=0.15.0"
+
+paths:
+  src: elec/src
+  layout: elec/layout
+
+builds:
+  default:
+    entry: elec/src/main.ato:VectraAutoLights
+
+package:
+  identifier: kkuninski/vectra-auto-lights
+  version: "1.0.0"
+  authors:
+    - name: Kaloyan Kuninski
+      email: kkuninski@example.com
+  summary: "Opel Vectra C automatic lighting controller — ESP32 based"
+  license: MIT

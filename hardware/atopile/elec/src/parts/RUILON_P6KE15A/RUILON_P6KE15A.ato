@@ -1,0 +1,18 @@
+import has_datasheet
+import has_designator_prefix
+import has_part_picked
+import is_atomic_part
+
+component Diode_P6KE15A:
+    """TVS диода 15V 600W — защита от пренапрежение."""
+
+    trait is_atomic_part<manufacturer="RUILON", partnumber="P6KE15A", footprint="DO-15_BD3.1-L6.7-P10.70-D0.9-FD.kicad_mod", symbol="P6KE15A.kicad_sym", model="DO-15_BD3.1-L6.7-P10.70-D0.9-FD.step">
+    trait has_part_picked::by_supplier<supplier_id="lcsc", supplier_partno="C10182", manufacturer="RUILON", partno="P6KE15A">
+    trait has_designator_prefix<prefix="D">
+    trait has_datasheet<datasheet="https://www.lcsc.com/datasheet/lcsc_datasheet_2403081022_RUILON-Shenzhen-Ruilongyuan-Elec-P6KE15A_C10182.pdf">
+
+    # pins
+    signal A ~ pin 1
+    signal K ~ pin 2
+    signal a ~ A
+    signal k ~ K

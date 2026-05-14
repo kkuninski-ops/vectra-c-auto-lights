@@ -1,0 +1,16 @@
+import has_datasheet
+import has_designator_prefix
+import has_part_picked
+import is_atomic_part
+
+component Cap_100uF:
+    """Електролитен кондензатор 100µF/25V."""
+
+    trait is_atomic_part<manufacturer="Nichicon", partnumber="UBT1E101MPD1TD", footprint="CAP-TH_BD8.0-P3.50-D0.5-FD.kicad_mod", symbol="UBT1E101MPD1TD.kicad_sym", model="CAP-TH_BD8.0-P3.50-D0.5-FD.step">
+    trait has_part_picked::by_supplier<supplier_id="lcsc", supplier_partno="C1579560", manufacturer="Nichicon", partno="UBT1E101MPD1TD">
+    trait has_designator_prefix<prefix="C">
+    trait has_datasheet<datasheet="https://wmsc.lcsc.com/wmsc/upload/file/pdf/v2/lcsc/2403111510_Nichicon-UBT1E101MPD1TD_C1579560.pdf">
+
+    # pins
+    signal p ~ pin 1
+    signal n ~ pin 2

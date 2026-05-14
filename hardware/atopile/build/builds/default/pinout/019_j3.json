@@ -1,0 +1,41 @@
+{
+  "name": "j3",
+  "atoAddress": "j3",
+  "designator": "J3",
+  "descriptor": "J3 \u2014 j3",
+  "typeName": "main.ato::VectraAutoLights.j3|parts/BOOMELE_2_54_1_3P/BOOMELE_2_54_1_3P.ato::Conn_1x03",
+  "footprintUuid": "e949442f-eaf8-4a14-93c9-97414642524b",
+  "leads": [
+    {
+      "leadDesignator": "p1",
+      "padNumbers": [
+        "1"
+      ],
+      "netName": "out_xenon",
+      "signalType": "signal",
+      "interfaces": [],
+      "isConnected": true
+    },
+    {
+      "leadDesignator": "p2",
+      "padNumbers": [
+        "2"
+      ],
+      "netName": "gnd",
+      "signalType": "signal",
+      "interfaces": [],
+      "isConnected": true
+    },
+    {
+      "leadDesignator": "p3",
+      "padNumbers": [
+        "3"
+      ],
+      "netName": "v12",
+      "signalType": "signal",
+      "interfaces": [],
+      "isConnected": true
+    }
+  ],
+  "warnings": []
+}

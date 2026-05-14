@@ -1,0 +1,33 @@
+{
+  "name": "illum.r13",
+  "atoAddress": "illum.r13",
+  "designator": "R3",
+  "descriptor": "R3 \u2014 illum.r13",
+  "typeName": "main.ato::VectraAutoLights.illum|main.ato::IllumDriver.r13|parts/UNI_ROYAL_MFR0W4F1000A50/UNI_ROYAL_MFR0W4F1000A50.ato::R_1k",
+  "footprintUuid": "3f80f86f-a96a-4959-8b42-59a64642524b",
+  "leads": [
+    {
+      "leadDesignator": "p1",
+      "padNumbers": [
+        "1"
+      ],
+      "netName": "ctrl-2",
+      "signalType": "signal",
+      "interfaces": [],
+      "isConnected": false
+    },
+    {
+      "leadDesignator": "p2",
+      "padNumbers": [
+        "2"
+      ],
+      "netName": "illum-2",
+      "signalType": "signal",
+      "interfaces": [],
+      "isConnected": true
+    }
+  ],
+  "warnings": [
+    "1 unconnected lead(s)"
+  ]
+}

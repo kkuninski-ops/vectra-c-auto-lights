@@ -1,0 +1,31 @@
+{
+  "name": "psu.c1",
+  "atoAddress": "psu.c1",
+  "designator": "C1",
+  "descriptor": "C1 \u2014 psu.c1",
+  "typeName": "main.ato::VectraAutoLights.psu|main.ato::PowerSupply.c1|parts/Nichicon_UBT1E101MPD1TD/Nichicon_UBT1E101MPD1TD.ato::Cap_100uF",
+  "footprintUuid": "7221c22a-ed59-4584-a656-59394642524b",
+  "leads": [
+    {
+      "leadDesignator": "p",
+      "padNumbers": [
+        "1"
+      ],
+      "netName": "v12",
+      "signalType": "signal",
+      "interfaces": [],
+      "isConnected": true
+    },
+    {
+      "leadDesignator": "n",
+      "padNumbers": [
+        "2"
+      ],
+      "netName": "gnd",
+      "signalType": "signal",
+      "interfaces": [],
+      "isConnected": true
+    }
+  ],
+  "warnings": []
+}

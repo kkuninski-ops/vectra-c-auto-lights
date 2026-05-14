@@ -1,0 +1,31 @@
+{
+  "name": "xenon.r9",
+  "atoAddress": "xenon.r9",
+  "designator": "R12",
+  "descriptor": "R12 \u2014 xenon.r9",
+  "typeName": "main.ato::VectraAutoLights.xenon|main.ato::XenonDriver.r9|parts/UNI_ROYAL_MFR0W4F1002A50/UNI_ROYAL_MFR0W4F1002A50.ato::R_10k",
+  "footprintUuid": "df2b0521-66f9-46ef-8e81-78684642524b",
+  "leads": [
+    {
+      "leadDesignator": "p1",
+      "padNumbers": [
+        "1"
+      ],
+      "netName": "v12",
+      "signalType": "signal",
+      "interfaces": [],
+      "isConnected": true
+    },
+    {
+      "leadDesignator": "p2",
+      "padNumbers": [
+        "2"
+      ],
+      "netName": "D",
+      "signalType": "signal",
+      "interfaces": [],
+      "isConnected": true
+    }
+  ],
+  "warnings": []
+}

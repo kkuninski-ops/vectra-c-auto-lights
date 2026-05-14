@@ -1,0 +1,33 @@
+{
+  "name": "gabari.r_base",
+  "atoAddress": "gabari.r_base",
+  "designator": "R2",
+  "descriptor": "R2 \u2014 gabari.r_base",
+  "typeName": "main.ato::VectraAutoLights.gabari|main.ato::RelayChannel.r_base|parts/UNI_ROYAL_MFR0W4F1000A50/UNI_ROYAL_MFR0W4F1000A50.ato::R_1k",
+  "footprintUuid": "6317b37b-d53b-44c4-9310-2de34642524b",
+  "leads": [
+    {
+      "leadDesignator": "p1",
+      "padNumbers": [
+        "1"
+      ],
+      "netName": "ctrl-1",
+      "signalType": "signal",
+      "interfaces": [],
+      "isConnected": false
+    },
+    {
+      "leadDesignator": "p2",
+      "padNumbers": [
+        "2"
+      ],
+      "netName": "gabari-2-1",
+      "signalType": "signal",
+      "interfaces": [],
+      "isConnected": true
+    }
+  ],
+  "warnings": [
+    "1 unconnected lead(s)"
+  ]
+}

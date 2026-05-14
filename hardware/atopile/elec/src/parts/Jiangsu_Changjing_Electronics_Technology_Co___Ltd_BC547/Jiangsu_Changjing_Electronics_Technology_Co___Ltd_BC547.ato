@@ -1,0 +1,20 @@
+import has_datasheet
+import has_designator_prefix
+import has_part_picked
+import is_atomic_part
+
+component BC547:
+    """NPN транзистор BC547 TO-92 — управление на реле/MOSFET."""
+
+    trait is_atomic_part<manufacturer="Jiangsu Changjing Electronics Technology Co., Ltd.", partnumber="BC547", footprint="TO-92-3_L4.9-W3.7-P1.27-L.kicad_mod", symbol="BC547_C47089404.kicad_sym", model="11.STEP">
+    trait has_part_picked::by_supplier<supplier_id="lcsc", supplier_partno="C47089404", manufacturer="Jiangsu Changjing Electronics Technology Co., Ltd.", partno="BC547">
+    trait has_designator_prefix<prefix="Q">
+    trait has_datasheet<datasheet="https://www.lcsc.com/datasheet/lcsc_datasheet_2504101957_Jiangsu-Changjing-Electronics-Technology-Co---Ltd--BC547_C47089404.pdf">
+
+    # pins
+    signal B ~ pin 2
+    signal C ~ pin 1
+    signal E ~ pin 3
+    signal b ~ B
+    signal c ~ C
+    signal e ~ E

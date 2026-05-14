@@ -1,0 +1,31 @@
+{
+  "name": "illum.d10",
+  "atoAddress": "illum.d10",
+  "designator": "D7",
+  "descriptor": "D7 \u2014 illum.d10",
+  "typeName": "main.ato::VectraAutoLights.illum|main.ato::IllumDriver.d10|parts/ST_1N4007/ST_1N4007.ato::Diode_1N4007",
+  "footprintUuid": "7fbbc11d-73c5-417b-9851-25f74642524b",
+  "leads": [
+    {
+      "leadDesignator": "k",
+      "padNumbers": [
+        "1"
+      ],
+      "netName": "out_illum",
+      "signalType": "signal",
+      "interfaces": [],
+      "isConnected": true
+    },
+    {
+      "leadDesignator": "A",
+      "padNumbers": [
+        "2"
+      ],
+      "netName": "gnd",
+      "signalType": "signal",
+      "interfaces": [],
+      "isConnected": true
+    }
+  ],
+  "warnings": []
+}

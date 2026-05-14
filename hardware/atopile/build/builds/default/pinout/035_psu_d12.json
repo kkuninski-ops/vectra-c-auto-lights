@@ -1,0 +1,31 @@
+{
+  "name": "psu.d12",
+  "atoAddress": "psu.d12",
+  "designator": "D10",
+  "descriptor": "D10 \u2014 psu.d12",
+  "typeName": "main.ato::VectraAutoLights.psu|main.ato::PowerSupply.d12|parts/RUILON_P6KE15A/RUILON_P6KE15A.ato::Diode_P6KE15A",
+  "footprintUuid": "5e8500dc-cf2e-40c1-894b-b9044642524b",
+  "leads": [
+    {
+      "leadDesignator": "a",
+      "padNumbers": [
+        "1"
+      ],
+      "netName": "gnd",
+      "signalType": "signal",
+      "interfaces": [],
+      "isConnected": true
+    },
+    {
+      "leadDesignator": "K",
+      "padNumbers": [
+        "2"
+      ],
+      "netName": "1",
+      "signalType": "signal",
+      "interfaces": [],
+      "isConnected": true
+    }
+  ],
+  "warnings": []
+}

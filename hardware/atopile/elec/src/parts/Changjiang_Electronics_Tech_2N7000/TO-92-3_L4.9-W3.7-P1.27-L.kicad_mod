@@ -1,0 +1,99 @@
+(footprint "Changjiang_Electronics_Tech_2N7000:TO-92-3_L4.9-W3.7-P1.27-L"
+	(version 20241229)
+	(generator "faebryk_convert")
+	(generator_version "v5")
+	(layer "F.Cu")
+	(tedit "5DC5F6A4")
+	(uuid "1b299ed3-e35b-4bec-bce6-35bffad09b72")
+	(property "Reference" "REF**"
+		(at 0 -4)
+		(layer "F.SilkS")
+		(uuid "adc56947-536f-4411-b91a-b674e022e3e4")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "TO-92-3_L4.9-W3.7-P1.27-L"
+		(at 0 4)
+		(layer "F.Fab")
+		(uuid "aee1fc26-1fd3-4c13-894c-ab902f06104b")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(attr smd)
+	(fp_circle
+		(center -2.48 1.5)
+		(end -2.45 1.5)
+		(stroke
+			(width 0.06)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(locked no)
+		(uuid "74cb397b-f7ad-4cd8-9834-987698582f19")
+	)
+	(fp_line
+		(start 1.98 1.5)
+		(end -1.98 1.5)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(layers "F.SilkS")
+		(locked no)
+		(uuid "951339a0-0615-4fb4-8745-657e51d737d6")
+	)
+	(fp_arc
+		(start -1.98 1.5)
+		(mid 0.0027081 -2.4680017)
+		(end 1.9767386 1.5043241)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(locked no)
+		(uuid "1ff5d2aa-592b-4f4c-8dba-c8b0936d634c")
+	)
+	(pad "3" thru_hole oval
+		(at 1.27 0 0)
+		(size 0.9 1.6)
+		(drill 0.700024)
+		(layers "*.Cu" "*.Mask")
+		(uuid "8017d3fa-df32-46e9-970f-765e8e1f1282")
+	)
+	(pad "2" thru_hole oval
+		(at 0 0 0)
+		(size 0.9 1.6)
+		(drill 0.700024)
+		(layers "*.Cu" "*.Mask")
+		(uuid "ed9337d3-9a84-48f3-b900-a3e0815a26d6")
+	)
+	(pad "1" thru_hole rect
+		(at -1.27 0 0)
+		(size 0.9 1.6)
+		(drill 0.700024)
+		(layers "*.Cu" "*.Mask")
+		(uuid "dbdce1bf-425b-4693-9334-01009d8372f6")
+	)
+	(model "${KIPRJMOD}/../../src/parts/Changjiang_Electronics_Tech_2N7000/11.STEP"
+		(offset
+			(xyz 0 0 5)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 0 0 180)
+		)
+	)
+	(embedded_fonts no)
+)

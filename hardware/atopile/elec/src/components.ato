@@ -1,0 +1,53 @@
+"""
+Vectra C Auto Lights — Component Library v2
+============================================
+Всички компоненти се дефинират директно в пакетните файлове.
+Тук само ги re-importваме под удобни имена.
+"""
+
+# ─── Пасивни компоненти ──────────────────────────────────────────────────────
+
+from "parts/UNI_ROYAL_MFR0W4F4702A50/UNI_ROYAL_MFR0W4F4702A50.ato" import R_47k
+from "parts/UNI_ROYAL_MFR0W4F1002A50/UNI_ROYAL_MFR0W4F1002A50.ato" import R_10k
+from "parts/UNI_ROYAL_MFR0W4F4701A50/UNI_ROYAL_MFR0W4F4701A50.ato" import R_4k7
+from "parts/UNI_ROYAL_MFR0W4F1000A50/UNI_ROYAL_MFR0W4F1000A50.ato" import R_1k
+from "parts/Nichicon_UBT1E101MPD1TD/Nichicon_UBT1E101MPD1TD.ato" import Cap_100uF
+from "parts/KEMET_C315C104M5U5TA/KEMET_C315C104M5U5TA.ato" import Cap_100nF
+
+# ─── Диоди ───────────────────────────────────────────────────────────────────
+
+from "parts/ST_1N4007/ST_1N4007.ato" import Diode_1N4007
+from "parts/MDD_Microdiode_Electronics_1N5408/MDD_Microdiode_Electronics_1N5408.ato" import Diode_1N5408
+from "parts/RUILON_P6KE15A/RUILON_P6KE15A.ato" import Diode_P6KE15A
+
+# ─── Предпазители ────────────────────────────────────────────────────────────
+
+from "parts/Schurter_FuseHolder_5x20/Schurter_FuseHolder_5x20.ato" import FuseHolder_5x20
+
+# ─── Транзистори ─────────────────────────────────────────────────────────────
+
+from "parts/Jiangsu_Changjing_Electronics_Technology_Co___Ltd_BC547/Jiangsu_Changjing_Electronics_Technology_Co___Ltd_BC547.ato" import BC547
+from "parts/Vishay_IRF4905PBF/Vishay_IRF4905PBF.ato" import IRF4905
+from "parts/Changjiang_Electronics_Tech_2N7000/Changjiang_Electronics_Tech_2N7000.ato" import N2N7000
+
+# ─── Оптрони ─────────────────────────────────────────────────────────────────
+
+from "parts/UMW_PC817C/UMW_PC817C.ato" import PC817
+
+# ─── Стабилизатор ────────────────────────────────────────────────────────────
+
+from "parts/HGSEMI_LM7805CT/HGSEMI_LM7805CT.ato" import LM7805
+
+# ─── Реле ────────────────────────────────────────────────────────────────────
+
+from "parts/Ningbo_Songle_Relay_SRD_12VDC_SL_C/Ningbo_Songle_Relay_SRD_12VDC_SL_C.ato" import Relay_SANYOU_SRD
+
+# ─── Конектори ───────────────────────────────────────────────────────────────
+
+from "parts/BOOMELE_PinHeader_1x2_P254/BOOMELE_PinHeader_1x2_P254.ato" import Conn_1x02
+from "parts/BOOMELE_2_54_1_3P/BOOMELE_2_54_1_3P.ato" import Conn_1x03
+from "parts/BOOMELE_PinHeader_1x4_P254/BOOMELE_PinHeader_1x4_P254.ato" import Conn_1x04
+
+# ─── ESP32-WROOM-32E модул ───────────────────────────────────────────────────
+
+from "parts/Espressif_Systems_ESP32_WROOM_32E_N4/Espressif_Systems_ESP32_WROOM_32E_N4.ato" import ESP32_DevKit

@@ -1,0 +1,18 @@
+import has_datasheet
+import has_designator_prefix
+import has_part_picked
+import is_atomic_part
+
+component Diode_1N5408:
+    """Изправителна диода 3A/1000V DO-201AD."""
+
+    trait is_atomic_part<manufacturer="MDD（Microdiode Electronics）", partnumber="1N5408", footprint="DO-201_BD5.3-L9.5-P13.50-D1.4-RD.kicad_mod", symbol="1N5408-C2460.kicad_sym", model="DO-201AD_D5.3-L8.4-P13.6.step">
+    trait has_part_picked::by_supplier<supplier_id="lcsc", supplier_partno="C2460", manufacturer="MDD（Microdiode Electronics）", partno="1N5408">
+    trait has_designator_prefix<prefix="D">
+    trait has_datasheet<datasheet="https://www.lcsc.com/datasheet/lcsc_datasheet_2408090954_MDD-Microdiode-Semiconductor-1N5408_C2460.pdf">
+
+    # pins
+    signal A ~ pin 2
+    signal C ~ pin 1
+    signal a ~ A
+    signal k ~ C

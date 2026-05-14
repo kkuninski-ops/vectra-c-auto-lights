@@ -1,0 +1,333 @@
+{
+  "name": "u1",
+  "atoAddress": "u1",
+  "designator": "U5",
+  "descriptor": "U5 \u2014 u1",
+  "typeName": "main.ato::VectraAutoLights.u1|parts/Espressif_Systems_ESP32_WROOM_32E_N4/Espressif_Systems_ESP32_WROOM_32E_N4.ato::ESP32_DevKit",
+  "footprintUuid": "8289ceb0-bae6-4083-97a0-31c94642524b",
+  "leads": [
+    {
+      "leadDesignator": "GND",
+      "padNumbers": [
+        "1"
+      ],
+      "netName": "gnd",
+      "signalType": "signal",
+      "interfaces": [],
+      "isConnected": true
+    },
+    {
+      "leadDesignator": "IO25",
+      "padNumbers": [
+        "10"
+      ],
+      "netName": "10",
+      "signalType": "signal",
+      "interfaces": [],
+      "isConnected": false
+    },
+    {
+      "leadDesignator": "IO26",
+      "padNumbers": [
+        "11"
+      ],
+      "netName": "11",
+      "signalType": "signal",
+      "interfaces": [],
+      "isConnected": false
+    },
+    {
+      "leadDesignator": "IO27",
+      "padNumbers": [
+        "12"
+      ],
+      "netName": "12",
+      "signalType": "signal",
+      "interfaces": [],
+      "isConnected": false
+    },
+    {
+      "leadDesignator": "IO14",
+      "padNumbers": [
+        "13"
+      ],
+      "netName": "13",
+      "signalType": "signal",
+      "interfaces": [],
+      "isConnected": false
+    },
+    {
+      "leadDesignator": "IO12",
+      "padNumbers": [
+        "14"
+      ],
+      "netName": "14",
+      "signalType": "signal",
+      "interfaces": [],
+      "isConnected": false
+    },
+    {
+      "leadDesignator": "GND",
+      "padNumbers": [
+        "15"
+      ],
+      "netName": "gnd",
+      "signalType": "signal",
+      "interfaces": [],
+      "isConnected": true
+    },
+    {
+      "leadDesignator": "IO13",
+      "padNumbers": [
+        "16"
+      ],
+      "netName": "16",
+      "signalType": "signal",
+      "interfaces": [],
+      "isConnected": false
+    },
+    {
+      "leadDesignator": "P3V3",
+      "padNumbers": [
+        "2"
+      ],
+      "netName": "v33",
+      "signalType": "signal",
+      "interfaces": [],
+      "isConnected": true
+    },
+    {
+      "leadDesignator": "IO15",
+      "padNumbers": [
+        "23"
+      ],
+      "netName": "23",
+      "signalType": "signal",
+      "interfaces": [],
+      "isConnected": false
+    },
+    {
+      "leadDesignator": "IO2",
+      "padNumbers": [
+        "24"
+      ],
+      "netName": "24",
+      "signalType": "signal",
+      "interfaces": [],
+      "isConnected": false
+    },
+    {
+      "leadDesignator": "IO0",
+      "padNumbers": [
+        "25"
+      ],
+      "netName": "25",
+      "signalType": "signal",
+      "interfaces": [],
+      "isConnected": false
+    },
+    {
+      "leadDesignator": "gpio4",
+      "padNumbers": [
+        "26"
+      ],
+      "netName": "vout",
+      "signalType": "signal",
+      "interfaces": [],
+      "isConnected": true
+    },
+    {
+      "leadDesignator": "IO16",
+      "padNumbers": [
+        "27"
+      ],
+      "netName": "sig_out",
+      "signalType": "signal",
+      "interfaces": [],
+      "isConnected": true
+    },
+    {
+      "leadDesignator": "IO17",
+      "padNumbers": [
+        "28"
+      ],
+      "netName": "sig_out-1",
+      "signalType": "signal",
+      "interfaces": [],
+      "isConnected": true
+    },
+    {
+      "leadDesignator": "gpio5",
+      "padNumbers": [
+        "29"
+      ],
+      "netName": "sig_out-2",
+      "signalType": "signal",
+      "interfaces": [],
+      "isConnected": true
+    },
+    {
+      "leadDesignator": "EN",
+      "padNumbers": [
+        "3"
+      ],
+      "netName": "EN",
+      "signalType": "signal",
+      "interfaces": [],
+      "isConnected": false
+    },
+    {
+      "leadDesignator": "gpio18",
+      "padNumbers": [
+        "30"
+      ],
+      "netName": "ctrl-3",
+      "signalType": "signal",
+      "interfaces": [],
+      "isConnected": true
+    },
+    {
+      "leadDesignator": "gpio19",
+      "padNumbers": [
+        "31"
+      ],
+      "netName": "ctrl-1",
+      "signalType": "signal",
+      "interfaces": [],
+      "isConnected": true
+    },
+    {
+      "leadDesignator": "gpio21",
+      "padNumbers": [
+        "33"
+      ],
+      "netName": "ctrl",
+      "signalType": "signal",
+      "interfaces": [],
+      "isConnected": true
+    },
+    {
+      "leadDesignator": "RXD0",
+      "padNumbers": [
+        "34"
+      ],
+      "netName": "34",
+      "signalType": "signal",
+      "interfaces": [],
+      "isConnected": false
+    },
+    {
+      "leadDesignator": "TXD0",
+      "padNumbers": [
+        "35"
+      ],
+      "netName": "35",
+      "signalType": "signal",
+      "interfaces": [],
+      "isConnected": false
+    },
+    {
+      "leadDesignator": "IO22",
+      "padNumbers": [
+        "36"
+      ],
+      "netName": "ctrl-2",
+      "signalType": "signal",
+      "interfaces": [],
+      "isConnected": true
+    },
+    {
+      "leadDesignator": "gpio23",
+      "padNumbers": [
+        "37"
+      ],
+      "netName": "37",
+      "signalType": "signal",
+      "interfaces": [],
+      "isConnected": false
+    },
+    {
+      "leadDesignator": "GND",
+      "padNumbers": [
+        "38"
+      ],
+      "netName": "gnd",
+      "signalType": "signal",
+      "interfaces": [],
+      "isConnected": true
+    },
+    {
+      "leadDesignator": "GND",
+      "padNumbers": [
+        "39"
+      ],
+      "netName": "gnd",
+      "signalType": "signal",
+      "interfaces": [],
+      "isConnected": true
+    },
+    {
+      "leadDesignator": "SENSOR_VP",
+      "padNumbers": [
+        "4"
+      ],
+      "netName": "SENSOR_VP",
+      "signalType": "signal",
+      "interfaces": [],
+      "isConnected": false
+    },
+    {
+      "leadDesignator": "SENSOR_VN",
+      "padNumbers": [
+        "5"
+      ],
+      "netName": "SENSOR_VN",
+      "signalType": "signal",
+      "interfaces": [],
+      "isConnected": false
+    },
+    {
+      "leadDesignator": "IO34",
+      "padNumbers": [
+        "6"
+      ],
+      "netName": "6",
+      "signalType": "signal",
+      "interfaces": [],
+      "isConnected": false
+    },
+    {
+      "leadDesignator": "IO35",
+      "padNumbers": [
+        "7"
+      ],
+      "netName": "7",
+      "signalType": "signal",
+      "interfaces": [],
+      "isConnected": false
+    },
+    {
+      "leadDesignator": "IO32",
+      "padNumbers": [
+        "8"
+      ],
+      "netName": "8",
+      "signalType": "signal",
+      "interfaces": [],
+      "isConnected": false
+    },
+    {
+      "leadDesignator": "IO33",
+      "padNumbers": [
+        "9"
+      ],
+      "netName": "9",
+      "signalType": "signal",
+      "interfaces": [],
+      "isConnected": false
+    }
+  ],
+  "warnings": [
+    "19 unconnected lead(s)"
+  ]
+}

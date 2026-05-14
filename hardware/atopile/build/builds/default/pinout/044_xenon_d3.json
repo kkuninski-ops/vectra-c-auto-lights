@@ -1,0 +1,31 @@
+{
+  "name": "xenon.d3",
+  "atoAddress": "xenon.d3",
+  "designator": "D12",
+  "descriptor": "D12 \u2014 xenon.d3",
+  "typeName": "main.ato::VectraAutoLights.xenon|main.ato::XenonDriver.d3|parts/MDD_Microdiode_Electronics_1N5408/MDD_Microdiode_Electronics_1N5408.ato::Diode_1N5408",
+  "footprintUuid": "4dc0d75c-5937-4f81-8854-24d54642524b",
+  "leads": [
+    {
+      "leadDesignator": "k",
+      "padNumbers": [
+        "1"
+      ],
+      "netName": "v12",
+      "signalType": "signal",
+      "interfaces": [],
+      "isConnected": true
+    },
+    {
+      "leadDesignator": "a",
+      "padNumbers": [
+        "2"
+      ],
+      "netName": "out_xenon",
+      "signalType": "signal",
+      "interfaces": [],
+      "isConnected": true
+    }
+  ],
+  "warnings": []
+}

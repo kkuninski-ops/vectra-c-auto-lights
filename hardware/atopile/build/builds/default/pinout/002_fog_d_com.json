@@ -1,0 +1,31 @@
+{
+  "name": "fog.d_com",
+  "atoAddress": "fog.d_com",
+  "designator": "D2",
+  "descriptor": "D2 \u2014 fog.d_com",
+  "typeName": "main.ato::VectraAutoLights.fog|main.ato::RelayChannel.d_com|parts/ST_1N4007/ST_1N4007.ato::Diode_1N4007",
+  "footprintUuid": "400774a5-6bac-4c4b-ac7c-8a164642524b",
+  "leads": [
+    {
+      "leadDesignator": "k",
+      "padNumbers": [
+        "1"
+      ],
+      "netName": "com",
+      "signalType": "signal",
+      "interfaces": [],
+      "isConnected": true
+    },
+    {
+      "leadDesignator": "A",
+      "padNumbers": [
+        "2"
+      ],
+      "netName": "gnd",
+      "signalType": "signal",
+      "interfaces": [],
+      "isConnected": true
+    }
+  ],
+  "warnings": []
+}

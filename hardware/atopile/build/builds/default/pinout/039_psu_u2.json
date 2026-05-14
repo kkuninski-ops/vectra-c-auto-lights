@@ -1,0 +1,41 @@
+{
+  "name": "psu.u2",
+  "atoAddress": "psu.u2",
+  "designator": "U4",
+  "descriptor": "U4 \u2014 psu.u2",
+  "typeName": "main.ato::VectraAutoLights.psu|main.ato::PowerSupply.u2|parts/HGSEMI_LM7805CT/HGSEMI_LM7805CT.ato::LM7805",
+  "footprintUuid": "f7b2f92c-36fe-42a7-9ce0-85624642524b",
+  "leads": [
+    {
+      "leadDesignator": "vi",
+      "padNumbers": [
+        "1"
+      ],
+      "netName": "v12",
+      "signalType": "signal",
+      "interfaces": [],
+      "isConnected": true
+    },
+    {
+      "leadDesignator": "GND",
+      "padNumbers": [
+        "2"
+      ],
+      "netName": "gnd",
+      "signalType": "signal",
+      "interfaces": [],
+      "isConnected": true
+    },
+    {
+      "leadDesignator": "vo",
+      "padNumbers": [
+        "3"
+      ],
+      "netName": "v33",
+      "signalType": "signal",
+      "interfaces": [],
+      "isConnected": true
+    }
+  ],
+  "warnings": []
+}

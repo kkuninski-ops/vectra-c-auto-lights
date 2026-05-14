@@ -1,0 +1,60 @@
+import has_datasheet
+import has_designator_prefix
+import has_part_picked
+import is_atomic_part
+
+component ESP32_DevKit:
+    """ESP32-WROOM-32E модул — главен контролер."""
+
+    trait is_atomic_part<manufacturer="Espressif Systems", partnumber="ESP32-WROOM-32E-N4", footprint="WIFI-SMD_ESP32-WROOM-32E.kicad_mod", symbol="ESP32-WROOM-32E(4MB).kicad_sym", model="WIFI-SMD_L25.5-W18.0-H3.1-ESP32-WROOM-32E.step">
+    trait has_part_picked::by_supplier<supplier_id="lcsc", supplier_partno="C701341", manufacturer="Espressif Systems", partno="ESP32-WROOM-32E-N4">
+    trait has_designator_prefix<prefix="U">
+    trait has_datasheet<datasheet="https://www.lcsc.com/datasheet/lcsc_datasheet_2207151900_Espressif-Systems-ESP32-WROOM-32E-N4_C701341.pdf">
+
+    # pins
+    signal EN ~ pin 3
+    signal GND ~ pin 1
+    GND ~ pin 15
+    GND ~ pin 38
+    GND ~ pin 39
+    signal IO0 ~ pin 25
+    signal IO2 ~ pin 24
+    signal IO4 ~ pin 26
+    signal IO5 ~ pin 29
+    signal IO12 ~ pin 14
+    signal IO13 ~ pin 16
+    signal IO14 ~ pin 13
+    signal IO15 ~ pin 23
+    signal IO16 ~ pin 27
+    signal IO17 ~ pin 28
+    signal IO18 ~ pin 30
+    signal IO19 ~ pin 31
+    signal IO21 ~ pin 33
+    signal IO22 ~ pin 36
+    signal IO23 ~ pin 37
+    signal IO25 ~ pin 10
+    signal IO26 ~ pin 11
+    signal IO27 ~ pin 12
+    signal IO32 ~ pin 8
+    signal IO33 ~ pin 9
+    signal IO34 ~ pin 6
+    signal IO35 ~ pin 7
+    signal P3V3 ~ pin 2
+    signal RXD0 ~ pin 34
+    signal SENSOR_VN ~ pin 5
+    signal SENSOR_VP ~ pin 4
+    signal TXD0 ~ pin 35
+
+    # aliases
+    signal vin    ~ P3V3
+    signal vcc    ~ P3V3
+    signal gnd    ~ GND
+    signal gpio4  ~ IO4
+    signal gpio5  ~ IO5
+    signal gpio16 ~ IO16
+    signal gpio17 ~ IO17
+    signal gpio18 ~ IO18
+    signal gpio19 ~ IO19
+    signal gpio21 ~ IO21
+    signal gpio22 ~ IO22
+    signal gpio23 ~ IO23

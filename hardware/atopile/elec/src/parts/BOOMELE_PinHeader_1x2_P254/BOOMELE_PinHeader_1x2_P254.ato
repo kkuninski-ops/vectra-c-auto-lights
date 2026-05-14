@@ -1,0 +1,13 @@
+import has_designator_prefix
+import has_part_picked
+import is_atomic_part
+
+component Conn_1x02:
+    """2-пинов конектор 2.54mm."""
+
+    trait is_atomic_part<manufacturer="BOOMELE", partnumber="2.54-1x2P", footprint="PinHeader_1x02_P2.54mm_Vertical.kicad_mod", symbol="BOOMELE_PinHeader_1x2_P254.kicad_sym">
+    trait has_part_picked::by_supplier<supplier_id="lcsc", supplier_partno="C49256", manufacturer="BOOMELE", partno="2.54-1*2P">
+    trait has_designator_prefix<prefix="J">
+
+    signal p1 ~ pin 1
+    signal p2 ~ pin 2

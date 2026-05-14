@@ -1,0 +1,63 @@
+{
+  "name": "fog.relay",
+  "atoAddress": "fog.relay",
+  "designator": "K1",
+  "descriptor": "K1 \u2014 fog.relay",
+  "typeName": "main.ato::VectraAutoLights.fog|main.ato::RelayChannel.relay|parts/Ningbo_Songle_Relay_SRD_12VDC_SL_C/Ningbo_Songle_Relay_SRD_12VDC_SL_C.ato::Relay_SANYOU_SRD",
+  "footprintUuid": "0fef079b-0e44-47d1-ba40-883a4642524b",
+  "leads": [
+    {
+      "leadDesignator": "coil1",
+      "padNumbers": [
+        "1"
+      ],
+      "netName": "v12",
+      "signalType": "signal",
+      "interfaces": [],
+      "isConnected": true
+    },
+    {
+      "leadDesignator": "coil2",
+      "padNumbers": [
+        "2"
+      ],
+      "netName": "2",
+      "signalType": "signal",
+      "interfaces": [],
+      "isConnected": true
+    },
+    {
+      "leadDesignator": "com",
+      "padNumbers": [
+        "3"
+      ],
+      "netName": "com",
+      "signalType": "signal",
+      "interfaces": [],
+      "isConnected": true
+    },
+    {
+      "leadDesignator": "nc",
+      "padNumbers": [
+        "4"
+      ],
+      "netName": "nc",
+      "signalType": "signal",
+      "interfaces": [],
+      "isConnected": false
+    },
+    {
+      "leadDesignator": "no",
+      "padNumbers": [
+        "5"
+      ],
+      "netName": "no",
+      "signalType": "signal",
+      "interfaces": [],
+      "isConnected": true
+    }
+  ],
+  "warnings": [
+    "1 unconnected lead(s)"
+  ]
+}

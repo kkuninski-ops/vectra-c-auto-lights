@@ -1,0 +1,18 @@
+import has_datasheet
+import has_designator_prefix
+import has_part_picked
+import is_atomic_part
+
+component Diode_1N4007:
+    """Изправителна диода 1A/1000V DO-41."""
+
+    trait is_atomic_part<manufacturer="ST", partnumber="1N4007", footprint="DO-41_BD2.4-L4.7-P8.70-D0.9-RD.kicad_mod", symbol="1N4007.kicad_sym", model="DO-41_D2.4-L4.7-P8.70.step">
+    trait has_part_picked::by_supplier<supplier_id="lcsc", supplier_partno="C106903", manufacturer="ST", partno="1N4007">
+    trait has_designator_prefix<prefix="D">
+    trait has_datasheet<datasheet="https://www.lcsc.com/datasheet/lcsc_datasheet_1811151642_ST-Semtech-1N4007_C106903.pdf">
+
+    # pins
+    signal A ~ pin 2
+    signal K ~ pin 1
+    signal a ~ A
+    signal k ~ K

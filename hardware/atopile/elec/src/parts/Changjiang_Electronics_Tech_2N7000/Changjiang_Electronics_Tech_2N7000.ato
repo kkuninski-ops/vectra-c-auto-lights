@@ -1,0 +1,20 @@
+import has_datasheet
+import has_designator_prefix
+import has_part_picked
+import is_atomic_part
+
+component N2N7000:
+    """N-Channel MOSFET 60V/0.35A TO-92 — управление на gate на IRF4905."""
+
+    trait is_atomic_part<manufacturer="Changjiang Electronics Tech ", partnumber="2N7000", footprint="TO-92-3_L4.9-W3.7-P1.27-L.kicad_mod", symbol="2N7000.kicad_sym", model="11.STEP">
+    trait has_part_picked::by_supplier<supplier_id="lcsc", supplier_partno="C9114", manufacturer="Changjiang Electronics Tech ", partno="2N7000">
+    trait has_designator_prefix<prefix="Q">
+    trait has_datasheet<datasheet="https://www.lcsc.com/datasheet/lcsc_datasheet_1809212223_Jiangsu-Changjing-Electronics-Technology-Co---Ltd--2N7000_C9114.pdf">
+
+    # pins
+    signal D ~ pin 3
+    signal G ~ pin 2
+    signal S ~ pin 1
+    signal d ~ D
+    signal g ~ G
+    signal s ~ S

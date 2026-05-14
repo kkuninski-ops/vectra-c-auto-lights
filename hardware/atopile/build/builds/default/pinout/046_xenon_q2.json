@@ -1,0 +1,41 @@
+{
+  "name": "xenon.q2",
+  "atoAddress": "xenon.q2",
+  "designator": "Q5",
+  "descriptor": "Q5 \u2014 xenon.q2",
+  "typeName": "main.ato::VectraAutoLights.xenon|main.ato::XenonDriver.q2|parts/Changjiang_Electronics_Tech_2N7000/Changjiang_Electronics_Tech_2N7000.ato::N2N7000",
+  "footprintUuid": "6abddb93-23f9-424b-a55a-26c84642524b",
+  "leads": [
+    {
+      "leadDesignator": "s",
+      "padNumbers": [
+        "1"
+      ],
+      "netName": "gnd",
+      "signalType": "signal",
+      "interfaces": [],
+      "isConnected": true
+    },
+    {
+      "leadDesignator": "G",
+      "padNumbers": [
+        "2"
+      ],
+      "netName": "xenon-2",
+      "signalType": "signal",
+      "interfaces": [],
+      "isConnected": true
+    },
+    {
+      "leadDesignator": "D",
+      "padNumbers": [
+        "3"
+      ],
+      "netName": "D",
+      "signalType": "signal",
+      "interfaces": [],
+      "isConnected": true
+    }
+  ],
+  "warnings": []
+}

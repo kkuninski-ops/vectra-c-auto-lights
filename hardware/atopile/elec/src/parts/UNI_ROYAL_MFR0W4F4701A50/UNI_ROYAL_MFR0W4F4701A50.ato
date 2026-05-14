@@ -1,0 +1,16 @@
+import has_datasheet
+import has_designator_prefix
+import has_part_picked
+import is_atomic_part
+
+component R_4k7:
+    """4.7kΩ — входен резистор на оптрон."""
+
+    trait is_atomic_part<manufacturer="UNI-ROYAL", partnumber="MFR0W4F4701A50", footprint="RES-TH_BD2.2-L6.5-P10.50-D0.6.kicad_mod", symbol="MFR0W4F4701A50.kicad_sym", model="RES-TH_BD2.2-L6.5-P10.50-D0.6.step">
+    trait has_part_picked::by_supplier<supplier_id="lcsc", supplier_partno="C57204", manufacturer="UNI-ROYAL", partno="MFR0W4F4701A50">
+    trait has_designator_prefix<prefix="R">
+    trait has_datasheet<datasheet="https://www.lcsc.com/datasheet/lcsc_datasheet_2304140030_UNI-ROYAL-Uniroyal-Elec-MFR0W4F4701A50_C57204.pdf">
+
+    # pins
+    signal p1 ~ pin 1
+    signal p2 ~ pin 2

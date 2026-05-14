@@ -1,0 +1,31 @@
+{
+  "name": "psu.f3",
+  "atoAddress": "psu.f3",
+  "designator": "F3",
+  "descriptor": "F3 \u2014 psu.f3",
+  "typeName": "main.ato::VectraAutoLights.psu|main.ato::PowerSupply.f3|parts/Schurter_FuseHolder_5x20/Schurter_FuseHolder_5x20.ato::FuseHolder_5x20",
+  "footprintUuid": "d4bd80e5-0ff1-4605-ad21-6b654642524b",
+  "leads": [
+    {
+      "leadDesignator": "p1",
+      "padNumbers": [
+        "1"
+      ],
+      "netName": "1",
+      "signalType": "signal",
+      "interfaces": [],
+      "isConnected": true
+    },
+    {
+      "leadDesignator": "p2",
+      "padNumbers": [
+        "2"
+      ],
+      "netName": "v12",
+      "signalType": "signal",
+      "interfaces": [],
+      "isConnected": true
+    }
+  ],
+  "warnings": []
+}

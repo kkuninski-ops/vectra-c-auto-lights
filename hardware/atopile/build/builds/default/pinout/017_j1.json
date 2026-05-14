@@ -1,0 +1,31 @@
+{
+  "name": "j1",
+  "atoAddress": "j1",
+  "designator": "J1",
+  "descriptor": "J1 \u2014 j1",
+  "typeName": "main.ato::VectraAutoLights.j1|parts/BOOMELE_PinHeader_1x2_P254/BOOMELE_PinHeader_1x2_P254.ato::Conn_1x02",
+  "footprintUuid": "602dae4e-b814-4eb9-bb18-3c194642524b",
+  "leads": [
+    {
+      "leadDesignator": "p1",
+      "padNumbers": [
+        "1"
+      ],
+      "netName": "vin_raw",
+      "signalType": "signal",
+      "interfaces": [],
+      "isConnected": true
+    },
+    {
+      "leadDesignator": "p2",
+      "padNumbers": [
+        "2"
+      ],
+      "netName": "gnd",
+      "signalType": "signal",
+      "interfaces": [],
+      "isConnected": true
+    }
+  ],
+  "warnings": []
+}

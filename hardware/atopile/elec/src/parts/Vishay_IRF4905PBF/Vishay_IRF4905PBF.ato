@@ -1,0 +1,14 @@
+import has_designator_prefix
+import has_part_picked
+import is_atomic_part
+
+component IRF4905:
+    """P-Channel MOSFET 55V/74A TO-220 — управление на ксенон баласт."""
+
+    trait is_atomic_part<manufacturer="Vishay", partnumber="IRF4905PBF", footprint="TO-220-3_Vertical.kicad_mod", symbol="Vishay_IRF4905PBF.kicad_sym">
+    trait has_part_picked::by_supplier<supplier_id="lcsc", supplier_partno="C2564", manufacturer="Vishay", partno="IRF4905PBF">
+    trait has_designator_prefix<prefix="Q">
+
+    signal g ~ pin 1
+    signal d ~ pin 2
+    signal s ~ pin 3

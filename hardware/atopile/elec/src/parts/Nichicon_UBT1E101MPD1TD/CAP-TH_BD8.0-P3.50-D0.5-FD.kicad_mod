@@ -1,0 +1,126 @@
+(footprint "Nichicon_UBT1E101MPD1TD:CAP-TH_BD8.0-P3.50-D0.5-FD"
+	(version 20241229)
+	(generator "faebryk_convert")
+	(generator_version "v5")
+	(layer "F.Cu")
+	(tedit "5DC5F6A4")
+	(uuid "06157782-bc5c-429a-8562-0b4f9a551a19")
+	(property "Reference" "REF**"
+		(at 0 -4)
+		(layer "F.SilkS")
+		(uuid "31c7e8a0-5fbd-4c91-8ca3-9b9f22083cc4")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(property "Value" "CAP-TH_BD8.0-P3.50-D0.5-FD"
+		(at 0 4)
+		(layer "F.Fab")
+		(uuid "5b22681a-e4ce-4177-b3e8-285c4caec404")
+		(effects
+			(font
+				(size 1 1)
+				(thickness 0.15)
+			)
+		)
+	)
+	(attr through_hole)
+	(fp_circle
+		(center -4 4.07)
+		(end -3.97 4.07)
+		(stroke
+			(width 0.06)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(locked no)
+		(uuid "36d93427-ccf3-4980-a980-208caad83e67")
+	)
+	(fp_circle
+		(center -1.75 -0)
+		(end -1.63 -0)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(locked no)
+		(uuid "ae488da8-e4cc-49e4-8e8d-7178985de817")
+	)
+	(fp_circle
+		(center 1.75 -0)
+		(end 1.87 -0)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(layer "F.Fab")
+		(locked no)
+		(uuid "8c223914-0542-460a-82cf-3c84e81301e1")
+	)
+	(fp_line
+		(start -2.2 -1.2)
+		(end -3.44 -1.2)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(layers "F.SilkS")
+		(locked no)
+		(uuid "ca088ee4-0189-4b05-8210-534802884733")
+	)
+	(fp_line
+		(start -2.82 -0.52)
+		(end -2.82 -1.87)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(layers "F.SilkS")
+		(locked no)
+		(uuid "5ce67e2b-00c9-431f-81d8-f0cd33aca0da")
+	)
+	(fp_arc
+		(start 0.07 -4)
+		(mid 0.0249077 4.0001968)
+		(end 0.0001843 -4.0000889)
+		(stroke
+			(width 0.25)
+			(type solid)
+		)
+		(layer "F.SilkS")
+		(locked no)
+		(uuid "4207dcfa-9b88-4638-9066-d79423c8cb03")
+	)
+	(pad "1" thru_hole circle
+		(at -1.75 -0 90)
+		(size 1.6 1.6)
+		(drill 0.999998)
+		(layers "*.Cu" "*.Mask")
+		(uuid "e17fc488-ec50-4d86-8af8-19c409bc0ec3")
+	)
+	(pad "2" thru_hole circle
+		(at 1.75 -0 90)
+		(size 1.6 1.6)
+		(drill 0.999998)
+		(layers "*.Cu" "*.Mask")
+		(uuid "7940fc3b-d904-47b0-9eaf-1e8013d9bb11")
+	)
+	(model "${KIPRJMOD}/../../src/parts/Nichicon_UBT1E101MPD1TD/CAP-TH_BD8.0-P3.50-D0.5-FD.step"
+		(offset
+			(xyz 0 -0 0)
+		)
+		(scale
+			(xyz 1 1 1)
+		)
+		(rotate
+			(xyz 0 0 270)
+		)
+	)
+	(embedded_fonts no)
+)

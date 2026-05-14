@@ -1,0 +1,41 @@
+{
+  "name": "fog.q",
+  "atoAddress": "fog.q",
+  "designator": "Q1",
+  "descriptor": "Q1 \u2014 fog.q",
+  "typeName": "main.ato::VectraAutoLights.fog|main.ato::RelayChannel.q|parts/Jiangsu_Changjing_Electronics_Technology_Co___Ltd_BC547/Jiangsu_Changjing_Electronics_Technology_Co___Ltd_BC547.ato::BC547",
+  "footprintUuid": "0709d4f6-030d-497f-ad13-a9ed4642524b",
+  "leads": [
+    {
+      "leadDesignator": "C",
+      "padNumbers": [
+        "1"
+      ],
+      "netName": "2",
+      "signalType": "signal",
+      "interfaces": [],
+      "isConnected": true
+    },
+    {
+      "leadDesignator": "B",
+      "padNumbers": [
+        "2"
+      ],
+      "netName": "fog-2",
+      "signalType": "signal",
+      "interfaces": [],
+      "isConnected": true
+    },
+    {
+      "leadDesignator": "e",
+      "padNumbers": [
+        "3"
+      ],
+      "netName": "gnd",
+      "signalType": "signal",
+      "interfaces": [],
+      "isConnected": true
+    }
+  ],
+  "warnings": []
+}

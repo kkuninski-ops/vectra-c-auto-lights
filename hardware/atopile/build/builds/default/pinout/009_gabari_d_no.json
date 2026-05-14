@@ -1,0 +1,31 @@
+{
+  "name": "gabari.d_no",
+  "atoAddress": "gabari.d_no",
+  "designator": "D6",
+  "descriptor": "D6 \u2014 gabari.d_no",
+  "typeName": "main.ato::VectraAutoLights.gabari|main.ato::RelayChannel.d_no|parts/ST_1N4007/ST_1N4007.ato::Diode_1N4007",
+  "footprintUuid": "511079a6-78a0-4912-8e0c-a9404642524b",
+  "leads": [
+    {
+      "leadDesignator": "k",
+      "padNumbers": [
+        "1"
+      ],
+      "netName": "no-1",
+      "signalType": "signal",
+      "interfaces": [],
+      "isConnected": true
+    },
+    {
+      "leadDesignator": "a",
+      "padNumbers": [
+        "2"
+      ],
+      "netName": "gnd",
+      "signalType": "signal",
+      "interfaces": [],
+      "isConnected": true
+    }
+  ],
+  "warnings": []
+}

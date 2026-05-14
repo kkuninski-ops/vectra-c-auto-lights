@@ -1,0 +1,53 @@
+{
+  "name": "ok1.ok",
+  "atoAddress": "ok1.ok",
+  "designator": "U1",
+  "descriptor": "U1 \u2014 ok1.ok",
+  "typeName": "main.ato::VectraAutoLights.ok1|main.ato::OptocouplerChannel.ok|parts/UMW_PC817C/UMW_PC817C.ato::PC817",
+  "footprintUuid": "85445f24-543a-4c40-9130-b4434642524b",
+  "leads": [
+    {
+      "leadDesignator": "a",
+      "padNumbers": [
+        "1"
+      ],
+      "netName": "AN",
+      "signalType": "signal",
+      "interfaces": [],
+      "isConnected": true
+    },
+    {
+      "leadDesignator": "k",
+      "padNumbers": [
+        "2"
+      ],
+      "netName": "gnd",
+      "signalType": "signal",
+      "interfaces": [],
+      "isConnected": false
+    },
+    {
+      "leadDesignator": "2",
+      "padNumbers": [
+        "3"
+      ],
+      "netName": "gnd",
+      "signalType": "signal",
+      "interfaces": [],
+      "isConnected": false
+    },
+    {
+      "leadDesignator": "COL",
+      "padNumbers": [
+        "4"
+      ],
+      "netName": "sig_out",
+      "signalType": "signal",
+      "interfaces": [],
+      "isConnected": true
+    }
+  ],
+  "warnings": [
+    "2 unconnected lead(s)"
+  ]
+}

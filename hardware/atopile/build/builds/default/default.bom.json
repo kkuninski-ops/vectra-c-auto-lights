@@ -1,0 +1,598 @@
+{
+  "version": "1.0",
+  "build_id": "76a6e06d08466d39",
+  "components": [
+    {
+      "id": "c106903",
+      "lcsc": "C106903",
+      "manufacturer": "ST",
+      "mpn": "1N4007",
+      "type": "diode",
+      "value": "",
+      "package": "ST_1N4007:DO-41_BD2.4-L4.7-P8.70-D0.9-RD",
+      "description": null,
+      "quantity": 9,
+      "unitCost": null,
+      "stock": null,
+      "isBasic": null,
+      "isPreferred": null,
+      "source": "manual",
+      "datasheet": "https://www.lcsc.com/datasheet/lcsc_datasheet_1811151642_ST-Semtech-1N4007_C106903.pdf",
+      "parameters": [],
+      "usages": [
+        {
+          "address": "main.ato::VectraAutoLights.fog|main.ato::RelayChannel.d_coil|parts/ST_1N4007/ST_1N4007.ato::Diode_1N4007",
+          "designator": "D1"
+        },
+        {
+          "address": "main.ato::VectraAutoLights.fog|main.ato::RelayChannel.d_com|parts/ST_1N4007/ST_1N4007.ato::Diode_1N4007",
+          "designator": "D2"
+        },
+        {
+          "address": "main.ato::VectraAutoLights.fog|main.ato::RelayChannel.d_no|parts/ST_1N4007/ST_1N4007.ato::Diode_1N4007",
+          "designator": "D3"
+        },
+        {
+          "address": "main.ato::VectraAutoLights.gabari|main.ato::RelayChannel.d_coil|parts/ST_1N4007/ST_1N4007.ato::Diode_1N4007",
+          "designator": "D4"
+        },
+        {
+          "address": "main.ato::VectraAutoLights.gabari|main.ato::RelayChannel.d_com|parts/ST_1N4007/ST_1N4007.ato::Diode_1N4007",
+          "designator": "D5"
+        },
+        {
+          "address": "main.ato::VectraAutoLights.gabari|main.ato::RelayChannel.d_no|parts/ST_1N4007/ST_1N4007.ato::Diode_1N4007",
+          "designator": "D6"
+        },
+        {
+          "address": "main.ato::VectraAutoLights.illum|main.ato::IllumDriver.d10|parts/ST_1N4007/ST_1N4007.ato::Diode_1N4007",
+          "designator": "D7"
+        },
+        {
+          "address": "main.ato::VectraAutoLights.illum|main.ato::IllumDriver.d11|parts/ST_1N4007/ST_1N4007.ato::Diode_1N4007",
+          "designator": "D8"
+        },
+        {
+          "address": "main.ato::VectraAutoLights.psu|main.ato::PowerSupply.d1|parts/ST_1N4007/ST_1N4007.ato::Diode_1N4007",
+          "designator": "D9"
+        }
+      ]
+    },
+    {
+      "id": "c57436",
+      "lcsc": "C57436",
+      "manufacturer": "UNI-ROYAL",
+      "mpn": "MFR0W4F1002A50",
+      "type": "resistor",
+      "value": "",
+      "package": "UNI_ROYAL_MFR0W4F1002A50:RES-TH_BD2.5-L6.5-P10.50-D0.6",
+      "description": null,
+      "quantity": 5,
+      "unitCost": null,
+      "stock": null,
+      "isBasic": null,
+      "isPreferred": null,
+      "source": "manual",
+      "datasheet": "https://www.lcsc.com/datasheet/lcsc_datasheet_2304140030_UNI-ROYAL-Uniroyal-Elec-MFR0W4F1002A50_C57436.pdf",
+      "parameters": [],
+      "usages": [
+        {
+          "address": "main.ato::VectraAutoLights.ok1|main.ato::OptocouplerChannel.r_pu|parts/UNI_ROYAL_MFR0W4F1002A50/UNI_ROYAL_MFR0W4F1002A50.ato::R_10k",
+          "designator": "R5"
+        },
+        {
+          "address": "main.ato::VectraAutoLights.ok2|main.ato::OptocouplerChannel.r_pu|parts/UNI_ROYAL_MFR0W4F1002A50/UNI_ROYAL_MFR0W4F1002A50.ato::R_10k",
+          "designator": "R7"
+        },
+        {
+          "address": "main.ato::VectraAutoLights.ok3|main.ato::OptocouplerChannel.r_pu|parts/UNI_ROYAL_MFR0W4F1002A50/UNI_ROYAL_MFR0W4F1002A50.ato::R_10k",
+          "designator": "R9"
+        },
+        {
+          "address": "main.ato::VectraAutoLights.vbat_div|main.ato::VbatDivider.r2|parts/UNI_ROYAL_MFR0W4F1002A50/UNI_ROYAL_MFR0W4F1002A50.ato::R_10k",
+          "designator": "R11"
+        },
+        {
+          "address": "main.ato::VectraAutoLights.xenon|main.ato::XenonDriver.r9|parts/UNI_ROYAL_MFR0W4F1002A50/UNI_ROYAL_MFR0W4F1002A50.ato::R_10k",
+          "designator": "R12"
+        }
+      ]
+    },
+    {
+      "id": "c49257",
+      "lcsc": "C49257",
+      "manufacturer": "BOOMELE",
+      "mpn": "2.54-1*3P\u9488",
+      "type": "connector",
+      "value": "",
+      "package": "BOOMELE_2_54_1_3P:HDR-TH_3P-P2.54-V-M-1",
+      "description": null,
+      "quantity": 4,
+      "unitCost": null,
+      "stock": null,
+      "isBasic": null,
+      "isPreferred": null,
+      "source": "manual",
+      "datasheet": "https://www.lcsc.com/datasheet/lcsc_datasheet_2212121130_BOOMELE-Boom-Precision-Elec-2-54-1-3P_C49257.pdf",
+      "parameters": [],
+      "usages": [
+        {
+          "address": "main.ato::VectraAutoLights.j3|parts/BOOMELE_2_54_1_3P/BOOMELE_2_54_1_3P.ato::Conn_1x03",
+          "designator": "J3"
+        },
+        {
+          "address": "main.ato::VectraAutoLights.j4|parts/BOOMELE_2_54_1_3P/BOOMELE_2_54_1_3P.ato::Conn_1x03",
+          "designator": "J4"
+        },
+        {
+          "address": "main.ato::VectraAutoLights.j5|parts/BOOMELE_2_54_1_3P/BOOMELE_2_54_1_3P.ato::Conn_1x03",
+          "designator": "J5"
+        },
+        {
+          "address": "main.ato::VectraAutoLights.j6|parts/BOOMELE_2_54_1_3P/BOOMELE_2_54_1_3P.ato::Conn_1x03",
+          "designator": "J6"
+        }
+      ]
+    },
+    {
+      "id": "c57438",
+      "lcsc": "C57438",
+      "manufacturer": "UNI-ROYAL",
+      "mpn": "MFR0W4F1000A50",
+      "type": "resistor",
+      "value": "",
+      "package": "UNI_ROYAL_MFR0W4F1000A50:RES-TH_BD2.2-L6.5-P10.50-D0.6",
+      "description": null,
+      "quantity": 4,
+      "unitCost": null,
+      "stock": null,
+      "isBasic": null,
+      "isPreferred": null,
+      "source": "manual",
+      "datasheet": "https://www.lcsc.com/datasheet/lcsc_datasheet_2304140030_UNI-ROYAL-Uniroyal-Elec-MFR0W4F1000A50_C57438.pdf",
+      "parameters": [],
+      "usages": [
+        {
+          "address": "main.ato::VectraAutoLights.fog|main.ato::RelayChannel.r_base|parts/UNI_ROYAL_MFR0W4F1000A50/UNI_ROYAL_MFR0W4F1000A50.ato::R_1k",
+          "designator": "R1"
+        },
+        {
+          "address": "main.ato::VectraAutoLights.gabari|main.ato::RelayChannel.r_base|parts/UNI_ROYAL_MFR0W4F1000A50/UNI_ROYAL_MFR0W4F1000A50.ato::R_1k",
+          "designator": "R2"
+        },
+        {
+          "address": "main.ato::VectraAutoLights.illum|main.ato::IllumDriver.r13|parts/UNI_ROYAL_MFR0W4F1000A50/UNI_ROYAL_MFR0W4F1000A50.ato::R_1k",
+          "designator": "R3"
+        },
+        {
+          "address": "main.ato::VectraAutoLights.xenon|main.ato::XenonDriver.r10|parts/UNI_ROYAL_MFR0W4F1000A50/UNI_ROYAL_MFR0W4F1000A50.ato::R_1k",
+          "designator": "R13"
+        }
+      ]
+    },
+    {
+      "id": "c2837835",
+      "lcsc": "C2837835",
+      "manufacturer": "Schurter",
+      "mpn": "0031.8201",
+      "type": "fuse",
+      "value": "",
+      "package": "Schurter_FuseHolder_5x20:Fuseholder_Cylinder-5x20mm_Schurter_0031_8201_Horizontal_Open",
+      "description": null,
+      "quantity": 3,
+      "unitCost": null,
+      "stock": null,
+      "isBasic": null,
+      "isPreferred": null,
+      "source": "manual",
+      "datasheet": null,
+      "parameters": [],
+      "usages": [
+        {
+          "address": "main.ato::VectraAutoLights.psu|main.ato::PowerSupply.f1|parts/Schurter_FuseHolder_5x20/Schurter_FuseHolder_5x20.ato::FuseHolder_5x20",
+          "designator": "F1"
+        },
+        {
+          "address": "main.ato::VectraAutoLights.psu|main.ato::PowerSupply.f2|parts/Schurter_FuseHolder_5x20/Schurter_FuseHolder_5x20.ato::FuseHolder_5x20",
+          "designator": "F2"
+        },
+        {
+          "address": "main.ato::VectraAutoLights.psu|main.ato::PowerSupply.f3|parts/Schurter_FuseHolder_5x20/Schurter_FuseHolder_5x20.ato::FuseHolder_5x20",
+          "designator": "F3"
+        }
+      ]
+    },
+    {
+      "id": "c3008368",
+      "lcsc": "C3008368",
+      "manufacturer": "UMW",
+      "mpn": "PC817C",
+      "type": "ic",
+      "value": "",
+      "package": "UMW_PC817C:DIP-4_L4.6-W6.5-P2.54-LS7.6-BL",
+      "description": null,
+      "quantity": 3,
+      "unitCost": null,
+      "stock": null,
+      "isBasic": null,
+      "isPreferred": null,
+      "source": "manual",
+      "datasheet": "https://wmsc.lcsc.com/wmsc/upload/file/pdf/v2/lcsc/2311091740_UMW-Youtai-Semiconductor-Co---Ltd--PC817C_C3008368.pdf",
+      "parameters": [],
+      "usages": [
+        {
+          "address": "main.ato::VectraAutoLights.ok1|main.ato::OptocouplerChannel.ok|parts/UMW_PC817C/UMW_PC817C.ato::PC817",
+          "designator": "U1"
+        },
+        {
+          "address": "main.ato::VectraAutoLights.ok2|main.ato::OptocouplerChannel.ok|parts/UMW_PC817C/UMW_PC817C.ato::PC817",
+          "designator": "U2"
+        },
+        {
+          "address": "main.ato::VectraAutoLights.ok3|main.ato::OptocouplerChannel.ok|parts/UMW_PC817C/UMW_PC817C.ato::PC817",
+          "designator": "U3"
+        }
+      ]
+    },
+    {
+      "id": "c47089404",
+      "lcsc": "C47089404",
+      "manufacturer": "Jiangsu Changjing Electronics Technology Co., Ltd.",
+      "mpn": "BC547",
+      "type": "transistor",
+      "value": "",
+      "package": "Jiangsu_Changjing_Electronics_Technology_Co___Ltd_BC547:TO-92-3_L4.9-W3.7-P1.27-L",
+      "description": null,
+      "quantity": 3,
+      "unitCost": null,
+      "stock": null,
+      "isBasic": null,
+      "isPreferred": null,
+      "source": "manual",
+      "datasheet": "https://www.lcsc.com/datasheet/lcsc_datasheet_2504101957_Jiangsu-Changjing-Electronics-Technology-Co---Ltd--BC547_C47089404.pdf",
+      "parameters": [],
+      "usages": [
+        {
+          "address": "main.ato::VectraAutoLights.fog|main.ato::RelayChannel.q|parts/Jiangsu_Changjing_Electronics_Technology_Co___Ltd_BC547/Jiangsu_Changjing_Electronics_Technology_Co___Ltd_BC547.ato::BC547",
+          "designator": "Q1"
+        },
+        {
+          "address": "main.ato::VectraAutoLights.gabari|main.ato::RelayChannel.q|parts/Jiangsu_Changjing_Electronics_Technology_Co___Ltd_BC547/Jiangsu_Changjing_Electronics_Technology_Co___Ltd_BC547.ato::BC547",
+          "designator": "Q2"
+        },
+        {
+          "address": "main.ato::VectraAutoLights.illum|main.ato::IllumDriver.q5|parts/Jiangsu_Changjing_Electronics_Technology_Co___Ltd_BC547/Jiangsu_Changjing_Electronics_Technology_Co___Ltd_BC547.ato::BC547",
+          "designator": "Q3"
+        }
+      ]
+    },
+    {
+      "id": "c57204",
+      "lcsc": "C57204",
+      "manufacturer": "UNI-ROYAL",
+      "mpn": "MFR0W4F4701A50",
+      "type": "resistor",
+      "value": "",
+      "package": "UNI_ROYAL_MFR0W4F4701A50:RES-TH_BD2.2-L6.5-P10.50-D0.6",
+      "description": null,
+      "quantity": 3,
+      "unitCost": null,
+      "stock": null,
+      "isBasic": null,
+      "isPreferred": null,
+      "source": "manual",
+      "datasheet": "https://www.lcsc.com/datasheet/lcsc_datasheet_2304140030_UNI-ROYAL-Uniroyal-Elec-MFR0W4F4701A50_C57204.pdf",
+      "parameters": [],
+      "usages": [
+        {
+          "address": "main.ato::VectraAutoLights.ok1|main.ato::OptocouplerChannel.r_in|parts/UNI_ROYAL_MFR0W4F4701A50/UNI_ROYAL_MFR0W4F4701A50.ato::R_4k7",
+          "designator": "R4"
+        },
+        {
+          "address": "main.ato::VectraAutoLights.ok2|main.ato::OptocouplerChannel.r_in|parts/UNI_ROYAL_MFR0W4F4701A50/UNI_ROYAL_MFR0W4F4701A50.ato::R_4k7",
+          "designator": "R6"
+        },
+        {
+          "address": "main.ato::VectraAutoLights.ok3|main.ato::OptocouplerChannel.r_in|parts/UNI_ROYAL_MFR0W4F4701A50/UNI_ROYAL_MFR0W4F4701A50.ato::R_4k7",
+          "designator": "R8"
+        }
+      ]
+    },
+    {
+      "id": "c2460",
+      "lcsc": "C2460",
+      "manufacturer": "MDD\uff08Microdiode Electronics\uff09",
+      "mpn": "1N5408",
+      "type": "diode",
+      "value": "",
+      "package": "MDD_Microdiode_Electronics_1N5408:DO-201_BD5.3-L9.5-P13.50-D1.4-RD",
+      "description": null,
+      "quantity": 2,
+      "unitCost": null,
+      "stock": null,
+      "isBasic": null,
+      "isPreferred": null,
+      "source": "manual",
+      "datasheet": "https://www.lcsc.com/datasheet/lcsc_datasheet_2408090954_MDD-Microdiode-Semiconductor-1N5408_C2460.pdf",
+      "parameters": [],
+      "usages": [
+        {
+          "address": "main.ato::VectraAutoLights.xenon|main.ato::XenonDriver.d2|parts/MDD_Microdiode_Electronics_1N5408/MDD_Microdiode_Electronics_1N5408.ato::Diode_1N5408",
+          "designator": "D11"
+        },
+        {
+          "address": "main.ato::VectraAutoLights.xenon|main.ato::XenonDriver.d3|parts/MDD_Microdiode_Electronics_1N5408/MDD_Microdiode_Electronics_1N5408.ato::Diode_1N5408",
+          "designator": "D12"
+        }
+      ]
+    },
+    {
+      "id": "c30431",
+      "lcsc": "C30431",
+      "manufacturer": "Ningbo Songle Relay",
+      "mpn": "SRD-12VDC-SL-C",
+      "type": "other",
+      "value": "",
+      "package": "Ningbo_Songle_Relay_SRD_12VDC_SL_C:RELAY-TH_SRD-XXVDC-XL-C",
+      "description": null,
+      "quantity": 2,
+      "unitCost": null,
+      "stock": null,
+      "isBasic": null,
+      "isPreferred": null,
+      "source": "manual",
+      "datasheet": "https://www.lcsc.com/datasheet/lcsc_datasheet_2304140030_Ningbo-Songle-Relay-SRD-12VDC-SL-C_C30431.pdf",
+      "parameters": [],
+      "usages": [
+        {
+          "address": "main.ato::VectraAutoLights.fog|main.ato::RelayChannel.relay|parts/Ningbo_Songle_Relay_SRD_12VDC_SL_C/Ningbo_Songle_Relay_SRD_12VDC_SL_C.ato::Relay_SANYOU_SRD",
+          "designator": "K1"
+        },
+        {
+          "address": "main.ato::VectraAutoLights.gabari|main.ato::RelayChannel.relay|parts/Ningbo_Songle_Relay_SRD_12VDC_SL_C/Ningbo_Songle_Relay_SRD_12VDC_SL_C.ato::Relay_SANYOU_SRD",
+          "designator": "K2"
+        }
+      ]
+    },
+    {
+      "id": "c10182",
+      "lcsc": "C10182",
+      "manufacturer": "RUILON",
+      "mpn": "P6KE15A",
+      "type": "diode",
+      "value": "",
+      "package": "RUILON_P6KE15A:DO-15_BD3.1-L6.7-P10.70-D0.9-FD",
+      "description": null,
+      "quantity": 1,
+      "unitCost": null,
+      "stock": null,
+      "isBasic": null,
+      "isPreferred": null,
+      "source": "manual",
+      "datasheet": "https://www.lcsc.com/datasheet/lcsc_datasheet_2403081022_RUILON-Shenzhen-Ruilongyuan-Elec-P6KE15A_C10182.pdf",
+      "parameters": [],
+      "usages": [
+        {
+          "address": "main.ato::VectraAutoLights.psu|main.ato::PowerSupply.d12|parts/RUILON_P6KE15A/RUILON_P6KE15A.ato::Diode_P6KE15A",
+          "designator": "D10"
+        }
+      ]
+    },
+    {
+      "id": "c1579560",
+      "lcsc": "C1579560",
+      "manufacturer": "Nichicon",
+      "mpn": "UBT1E101MPD1TD",
+      "type": "capacitor",
+      "value": "",
+      "package": "Nichicon_UBT1E101MPD1TD:CAP-TH_BD8.0-P3.50-D0.5-FD",
+      "description": null,
+      "quantity": 1,
+      "unitCost": null,
+      "stock": null,
+      "isBasic": null,
+      "isPreferred": null,
+      "source": "manual",
+      "datasheet": "https://wmsc.lcsc.com/wmsc/upload/file/pdf/v2/lcsc/2403111510_Nichicon-UBT1E101MPD1TD_C1579560.pdf",
+      "parameters": [],
+      "usages": [
+        {
+          "address": "main.ato::VectraAutoLights.psu|main.ato::PowerSupply.c1|parts/Nichicon_UBT1E101MPD1TD/Nichicon_UBT1E101MPD1TD.ato::Cap_100uF",
+          "designator": "C1"
+        }
+      ]
+    },
+    {
+      "id": "c1711",
+      "lcsc": "C1711",
+      "manufacturer": "KEMET",
+      "mpn": "C315C104M5U5TA",
+      "type": "capacitor",
+      "value": "",
+      "package": "KEMET_C315C104M5U5TA:C_Disc_D5.0mm_W2.5mm_P2.50mm",
+      "description": null,
+      "quantity": 1,
+      "unitCost": null,
+      "stock": null,
+      "isBasic": null,
+      "isPreferred": null,
+      "source": "manual",
+      "datasheet": null,
+      "parameters": [],
+      "usages": [
+        {
+          "address": "main.ato::VectraAutoLights.psu|main.ato::PowerSupply.c2|parts/KEMET_C315C104M5U5TA/KEMET_C315C104M5U5TA.ato::Cap_100nF",
+          "designator": "C2"
+        }
+      ]
+    },
+    {
+      "id": "c2564",
+      "lcsc": "C2564",
+      "manufacturer": "Vishay",
+      "mpn": "IRF4905PBF",
+      "type": "transistor",
+      "value": "",
+      "package": "Vishay_IRF4905PBF:TO-220-3_Vertical",
+      "description": null,
+      "quantity": 1,
+      "unitCost": null,
+      "stock": null,
+      "isBasic": null,
+      "isPreferred": null,
+      "source": "manual",
+      "datasheet": null,
+      "parameters": [],
+      "usages": [
+        {
+          "address": "main.ato::VectraAutoLights.xenon|main.ato::XenonDriver.q1|parts/Vishay_IRF4905PBF/Vishay_IRF4905PBF.ato::IRF4905",
+          "designator": "Q4"
+        }
+      ]
+    },
+    {
+      "id": "c49256",
+      "lcsc": "C49256",
+      "manufacturer": "BOOMELE",
+      "mpn": "2.54-1*2P",
+      "type": "connector",
+      "value": "",
+      "package": "BOOMELE_PinHeader_1x2_P254:PinHeader_1x02_P2.54mm_Vertical",
+      "description": null,
+      "quantity": 1,
+      "unitCost": null,
+      "stock": null,
+      "isBasic": null,
+      "isPreferred": null,
+      "source": "manual",
+      "datasheet": null,
+      "parameters": [],
+      "usages": [
+        {
+          "address": "main.ato::VectraAutoLights.j1|parts/BOOMELE_PinHeader_1x2_P254/BOOMELE_PinHeader_1x2_P254.ato::Conn_1x02",
+          "designator": "J1"
+        }
+      ]
+    },
+    {
+      "id": "c49661",
+      "lcsc": "C49661",
+      "manufacturer": "BOOMELE",
+      "mpn": "2.54-1*4P",
+      "type": "connector",
+      "value": "",
+      "package": "BOOMELE_PinHeader_1x4_P254:PinHeader_1x04_P2.54mm_Vertical",
+      "description": null,
+      "quantity": 1,
+      "unitCost": null,
+      "stock": null,
+      "isBasic": null,
+      "isPreferred": null,
+      "source": "manual",
+      "datasheet": null,
+      "parameters": [],
+      "usages": [
+        {
+          "address": "main.ato::VectraAutoLights.j2|parts/BOOMELE_PinHeader_1x4_P254/BOOMELE_PinHeader_1x4_P254.ato::Conn_1x04",
+          "designator": "J2"
+        }
+      ]
+    },
+    {
+      "id": "c58605",
+      "lcsc": "C58605",
+      "manufacturer": "UNI-ROYAL",
+      "mpn": "MFR0W4F4702A50",
+      "type": "resistor",
+      "value": "",
+      "package": "UNI_ROYAL_MFR0W4F4702A50:RES-TH_BD2.5-L6.5-P10.50-D0.6",
+      "description": null,
+      "quantity": 1,
+      "unitCost": null,
+      "stock": null,
+      "isBasic": null,
+      "isPreferred": null,
+      "source": "manual",
+      "datasheet": "https://www.lcsc.com/datasheet/lcsc_datasheet_2304140030_UNI-ROYAL-Uniroyal-Elec-MFR0W4F4702A50_C58605.pdf",
+      "parameters": [],
+      "usages": [
+        {
+          "address": "main.ato::VectraAutoLights.vbat_div|main.ato::VbatDivider.r1|parts/UNI_ROYAL_MFR0W4F4702A50/UNI_ROYAL_MFR0W4F4702A50.ato::R_47k",
+          "designator": "R10"
+        }
+      ]
+    },
+    {
+      "id": "c701341",
+      "lcsc": "C701341",
+      "manufacturer": "Espressif Systems",
+      "mpn": "ESP32-WROOM-32E-N4",
+      "type": "ic",
+      "value": "",
+      "package": "Espressif_Systems_ESP32_WROOM_32E_N4:WIFI-SMD_ESP32-WROOM-32E",
+      "description": null,
+      "quantity": 1,
+      "unitCost": null,
+      "stock": null,
+      "isBasic": null,
+      "isPreferred": null,
+      "source": "manual",
+      "datasheet": "https://www.lcsc.com/datasheet/lcsc_datasheet_2207151900_Espressif-Systems-ESP32-WROOM-32E-N4_C701341.pdf",
+      "parameters": [],
+      "usages": [
+        {
+          "address": "main.ato::VectraAutoLights.u1|parts/Espressif_Systems_ESP32_WROOM_32E_N4/Espressif_Systems_ESP32_WROOM_32E_N4.ato::ESP32_DevKit",
+          "designator": "U5"
+        }
+      ]
+    },
+    {
+      "id": "c725349",
+      "lcsc": "C725349",
+      "manufacturer": "HGSEMI",
+      "mpn": "LM7805CT",
+      "type": "ic",
+      "value": "",
+      "package": "HGSEMI_LM7805CT:TO-220-3_L10.0-W4.5-P2.54-L",
+      "description": null,
+      "quantity": 1,
+      "unitCost": null,
+      "stock": null,
+      "isBasic": null,
+      "isPreferred": null,
+      "source": "manual",
+      "datasheet": "https://www.lcsc.com/datasheet/lcsc_datasheet_2008251935_HGSEMI-LM7805CT_C725349.pdf",
+      "parameters": [],
+      "usages": [
+        {
+          "address": "main.ato::VectraAutoLights.psu|main.ato::PowerSupply.u2|parts/HGSEMI_LM7805CT/HGSEMI_LM7805CT.ato::LM7805",
+          "designator": "U4"
+        }
+      ]
+    },
+    {
+      "id": "c9114",
+      "lcsc": "C9114",
+      "manufacturer": "Changjiang Electronics Tech ",
+      "mpn": "2N7000",
+      "type": "transistor",
+      "value": "",
+      "package": "Changjiang_Electronics_Tech_2N7000:TO-92-3_L4.9-W3.7-P1.27-L",
+      "description": null,
+      "quantity": 1,
+      "unitCost": null,
+      "stock": null,
+      "isBasic": null,
+      "isPreferred": null,
+      "source": "manual",
+      "datasheet": "https://www.lcsc.com/datasheet/lcsc_datasheet_1809212223_Jiangsu-Changjing-Electronics-Technology-Co---Ltd--2N7000_C9114.pdf",
+      "parameters": [],
+      "usages": [
+        {
+          "address": "main.ato::VectraAutoLights.xenon|main.ato::XenonDriver.q2|parts/Changjiang_Electronics_Tech_2N7000/Changjiang_Electronics_Tech_2N7000.ato::N2N7000",
+          "designator": "Q5"
+        }
+      ]
+    }
+  ]
+}

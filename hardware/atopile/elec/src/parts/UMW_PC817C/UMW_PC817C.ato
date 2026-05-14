@@ -1,0 +1,22 @@
+import has_datasheet
+import has_designator_prefix
+import has_part_picked
+import is_atomic_part
+
+component PC817:
+    """Оптрон PC817 DIP-4 — галванична изолация на входни сигнали."""
+
+    trait is_atomic_part<manufacturer="UMW", partnumber="PC817C", footprint="DIP-4_L4.6-W6.5-P2.54-LS7.6-BL.kicad_mod", symbol="PC817C_C3008368.kicad_sym", model="DIP-4_L4.6-W6.5-H3.5-LS7.62-P2.54.step">
+    trait has_part_picked::by_supplier<supplier_id="lcsc", supplier_partno="C3008368", manufacturer="UMW", partno="PC817C">
+    trait has_designator_prefix<prefix="U">
+    trait has_datasheet<datasheet="https://wmsc.lcsc.com/wmsc/upload/file/pdf/v2/lcsc/2311091740_UMW-Youtai-Semiconductor-Co---Ltd--PC817C_C3008368.pdf">
+
+    # pins
+    signal AN  ~ pin 1
+    signal CAT ~ pin 2
+    signal COL ~ pin 4
+    signal EM  ~ pin 3
+    signal a   ~ AN
+    signal k   ~ CAT
+    signal col ~ COL
+    signal em  ~ EM

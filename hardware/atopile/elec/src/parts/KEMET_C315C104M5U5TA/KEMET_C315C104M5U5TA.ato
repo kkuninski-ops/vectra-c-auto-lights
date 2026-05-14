@@ -1,0 +1,13 @@
+import has_designator_prefix
+import has_part_picked
+import is_atomic_part
+
+component Cap_100nF:
+    """Керамичен кондензатор 100nF/50V."""
+
+    trait is_atomic_part<manufacturer="KEMET", partnumber="C315C104M5U5TA", footprint="C_Disc_D5.0mm_W2.5mm_P2.50mm.kicad_mod", symbol="KEMET_C315C104M5U5TA.kicad_sym">
+    trait has_part_picked::by_supplier<supplier_id="lcsc", supplier_partno="C1711", manufacturer="KEMET", partno="C315C104M5U5TA">
+    trait has_designator_prefix<prefix="C">
+
+    signal p ~ pin 1
+    signal n ~ pin 2

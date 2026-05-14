@@ -1,0 +1,63 @@
+{
+  "name": "gabari.relay",
+  "atoAddress": "gabari.relay",
+  "designator": "K2",
+  "descriptor": "K2 \u2014 gabari.relay",
+  "typeName": "main.ato::VectraAutoLights.gabari|main.ato::RelayChannel.relay|parts/Ningbo_Songle_Relay_SRD_12VDC_SL_C/Ningbo_Songle_Relay_SRD_12VDC_SL_C.ato::Relay_SANYOU_SRD",
+  "footprintUuid": "7c6ec46e-4629-416d-b90f-549a4642524b",
+  "leads": [
+    {
+      "leadDesignator": "coil1",
+      "padNumbers": [
+        "1"
+      ],
+      "netName": "v12",
+      "signalType": "signal",
+      "interfaces": [],
+      "isConnected": true
+    },
+    {
+      "leadDesignator": "coil2",
+      "padNumbers": [
+        "2"
+      ],
+      "netName": "gabari-2",
+      "signalType": "signal",
+      "interfaces": [],
+      "isConnected": true
+    },
+    {
+      "leadDesignator": "com",
+      "padNumbers": [
+        "3"
+      ],
+      "netName": "com-1",
+      "signalType": "signal",
+      "interfaces": [],
+      "isConnected": true
+    },
+    {
+      "leadDesignator": "nc",
+      "padNumbers": [
+        "4"
+      ],
+      "netName": "gabari.relay-nc",
+      "signalType": "signal",
+      "interfaces": [],
+      "isConnected": false
+    },
+    {
+      "leadDesignator": "no",
+      "padNumbers": [
+        "5"
+      ],
+      "netName": "no-1",
+      "signalType": "signal",
+      "interfaces": [],
+      "isConnected": true
+    }
+  ],
+  "warnings": [
+    "1 unconnected lead(s)"
+  ]
+}
