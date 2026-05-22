@@ -1,0 +1,61 @@
+
+(rules PCB default.dsn
+  (snap_angle 
+    fortyfive_degree
+  )
+  (rule
+    (width 800.0)
+    (clearance 500.0)
+    (clearance 400.0 (type smd_to_turn_gap))
+    (clearance 125.0 (type smd))
+    (clearance 500.0 (type "kicad_default"))
+  )
+  (padstack "Via[0-1]_1600:800_um"
+    (shape
+      (circle F.Cu 1600.0 0.0 0.0)
+    )
+    (shape
+      (circle B.Cu 1600.0 0.0 0.0)
+    )
+    (attach off)
+  )
+  (via 
+    "Via[0-1]_1600:800_um" "Via[0-1]_1600:800_um" default
+  )
+  (via 
+    "Via[0-1]_1600:800_um-kicad_default" "Via[0-1]_1600:800_um" "kicad_default"
+  )
+  (via_rule
+    default "Via[0-1]_1600:800_um"
+  )
+  (via_rule
+    "kicad_default" "Via[0-1]_1600:800_um-kicad_default"
+  )
+  (class default
+    (clearance_class default)
+    (via_rule default)
+    (rule
+      (width 800.0)
+    )
+    (circuit 
+      (use_layer F.Cu B.Cu)
+    )
+  )
+  (class "kicad_default"
+    com no gnd "2" "fog-2" v12 nc "com-1"
+    "no-1" "gabari-2" v33 vout "ctrl-2" "illum-2" "out_xenon" "1"
+    "vin_raw" "ctrl-1" "gabari-2-1" "xenon-2" D "sig_out-2" ctrl "gabari.relay-nc"
+    "out_illum" "sig_out" EN "SENSOR_VP" "SENSOR_VN" "6" "7" "8"
+    "9" "10" "11" "12" "13" "14" "16" "23"
+    "24" "25" "sig_out-1" "ctrl-3" "34" "35" "37" AN
+    "sig_in" "ok3-AN" "sig_auto" "ok2-AN" "sig_unlock"
+    (clearance_class "kicad_default")
+    (via_rule "kicad_default")
+    (rule
+      (width 800.0)
+    )
+    (circuit 
+      (use_layer F.Cu B.Cu)
+    )
+  )
+)
